@@ -1,0 +1,68 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "testing.autoRun.mode": "rerun",
+  "editor.multiCursorModifier": "alt",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.fixAll.eslint": true,
+    "source.removeUnusedImports": true
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "vue",
+    "markdown"
+  ],
+  // "eslint.lintTask.enable": true,
+  "eslint.workingDirectories": ["./"],
+  // "eslint.workingDirectories": [{ "mode": "auto" }],
+  // "eslint.workingDirectories": [{ "directory": ".", "changeProcessCWD": true }],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // Controls whether the editor should automatically format the pasted content. A formatter must be available and the formatter should be able to format a range in a document.
+  "editor.formatOnPaste": true,
+  // Format a file on save. A formatter must be available, the file must not be saved after delay, and the editor must not be shutting down.
+  "editor.formatOnSave": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "search.useGlobalIgnoreFiles": true,
+  "[dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "cSpell.words": [
+    "autosize",
+    "cloudinary",
+    "commitlint",
+    "Contournement",
+    "cssnano",
+    "generatedby",
+    "headlessui",
+    "rewardful",
+    "tailwindcss",
+    "twimg",
+    "typecheck",
+    "unist"
+  ],
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  }
+}

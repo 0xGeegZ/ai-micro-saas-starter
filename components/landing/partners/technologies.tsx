@@ -1,4 +1,4 @@
-export type Tool = {
+type Tool = {
   name: string
   icon: React.ReactNode
 }

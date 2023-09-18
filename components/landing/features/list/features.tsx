@@ -1,6 +1,10 @@
 import { Badge } from "@/components/ui/badge"
-import { Tool } from "../../callsquare-landing"
 import Image from "next/image"
+
+type Tool = {
+  name: string
+  icon: React.ReactNode
+}
 
 type Features = {
   description: string

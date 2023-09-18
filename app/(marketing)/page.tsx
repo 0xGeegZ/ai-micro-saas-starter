@@ -14,6 +14,8 @@ import { Technologies } from "@/components/landing/partners/technologies"
 import { Features } from "@/components/landing/features/list/features"
 
 const LandingPage = () => {
+  // const user = await getCurrentUser()
+  // if (user) redirect("/dashboard")
   return (
     <div className="h-full ">
       <LandingNavbar />

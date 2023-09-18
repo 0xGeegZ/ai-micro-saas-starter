@@ -1,5 +1,5 @@
 "use client"
-import { TypographyP } from "@/components/ui/typography"
+import { TypographyH1, TypographyP } from "@/components/ui/typography"
 import { FormProps } from "@/lib/hooks/use-playground-form"
 import React from "react"
 import { ExampleOutputDialog } from "./example-output-dialog"
@@ -549,7 +549,15 @@ export function Examples() {
     React.useState<FormProps | null>(null)
 
   return (
-    <React.Fragment>
+    <div className="w-full items-center justify-start">
+      <div className="w-full">
+        <TypographyH1 className="!text-3xl font-semibold !mb-0">
+          See examples
+        </TypographyH1>
+        <TypographyP className="text-xl text-muted-foreground !mt-2 mb-8">
+          You can see more examples. Select one of the prompts below.
+        </TypographyP>
+      </div>
       <ExampleOutputDialog
         item={selectedExample}
         setOpen={() => setSelectedExample(null)}
@@ -574,6 +582,6 @@ export function Examples() {
           ))}
         </Marquee>
       </div>
-    </React.Fragment>
+    </div>
   )
 }

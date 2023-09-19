@@ -1,9 +1,15 @@
 "use client"
 
-import { Skeleton } from "@/components/ui/skeleton"
-import { cn } from "@/lib/utils"
+import { Skeleton } from "@/components/ui/skeleton";
+import { cn } from "@/lib/utils";
 import {
   enrichTweet,
+  useTweet,
+  EnrichedTweet,
+  TweetProps,
+  TwitterComponents,
+} from "react-tweet";
+import { Tweet } from "react-tweet/api";
   useTweet,
   type EnrichedTweet,
   type TweetProps,

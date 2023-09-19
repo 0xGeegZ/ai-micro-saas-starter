@@ -8,4 +8,4 @@ const Error = () => {
    );
 };
 
-export default Error;
+export const Error = () => {};

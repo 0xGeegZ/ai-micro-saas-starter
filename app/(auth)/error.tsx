@@ -6,6 +6,6 @@ const Error = () => {
   return ( 
     <Empty label="Something went wrong." />
    );
-}
- 
+};
+
 export default Error;

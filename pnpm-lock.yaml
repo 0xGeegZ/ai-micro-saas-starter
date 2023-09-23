@@ -52,7 +52,7 @@ specifiers:
   framer-motion: ^10.16.4
   lucide-react: ^0.259.0
   maath: ^0.9.0
-  million: 2.6.0
+  million: 2.6.0-beta.16
   next: 13.5.2
   next-themes: ^0.2.1
   openai: ^3.3.0
@@ -129,7 +129,7 @@ dependencies:
   framer-motion: 10.16.4_biqbaboplfbrettd7655fr4n2y
   lucide-react: 0.259.0_react@18.2.0
   maath: 0.9.0
-  million: 2.6.0
+  million: 2.6.0-beta.16
   next: 13.5.2_biqbaboplfbrettd7655fr4n2y
   next-themes: 0.2.1_a5awh3fq7n5gjpbh6s2j4fmxfi
   openai: 3.3.0
@@ -5096,8 +5096,8 @@ packages:
       picomatch: 2.3.1
     dev: false
 
-  /million/2.6.0:
-    resolution: {integrity: sha512-F0tm/86Bo+/+3CI3MRivovbO4y+D6N9F+1F55dbJ+Wpo7b69CqwHXunwH+Abc7iHz6lZmYaaHe2uqZrS3aLEdw==}
+  /million/2.6.0-beta.16:
+    resolution: {integrity: sha512-w4TMCx8EsfFjF6MLXJXvLtaZOd1KnGFBNgYlA7iQqJhJYc5iv6yukl+olhALFqbU1Jv9l9QKosYaWvXnX3ohDw==}
     hasBin: true
     dependencies:
       '@babel/core': 7.22.20

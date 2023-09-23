@@ -1,6 +1,6 @@
 # Micro SaaS AI Starter with Next.js 13, React, Tailwind, Prisma, Stripe & GeneratedBy API
 
-![Micro SaaS AI Starter](https://github.com/0xGeegZ/ai-micro-saas-starter/public/repo-amin-image.png)
+![Micro SaaS AI Starter](https://github.com/0xGeegZ/ai-micro-saas-starter/blob/master/public/repo-amin-image.png)
 
 This is a repository for Build a Micro SaaS AI Platform with Next.js 13, React, Tailwind, Prisma, Stripe and GeneratedBy for the AI part.
 

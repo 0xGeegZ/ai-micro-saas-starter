@@ -150,7 +150,7 @@ type Props = {
   className?: string
 }
 
-export const MyTweet = ({
+const MyTweet = ({
   tweet: t,
   components,
   className,
@@ -193,8 +193,9 @@ export const MyTweet = ({
     </div>
   )
 }
+export default MyTweet;
 
-export const TweetCard = ({
+const TweetCard = ({
   id,
   apiUrl,
   fallback = <TweetSkeleton />,
@@ -212,8 +213,9 @@ export const TweetCard = ({
 
   return <MyTweet tweet={data} components={components} {...props} />
 }
+export default TweetCard;
 
-export const ServerTweetCard = ({
+const ServerTweetCard = ({
   tweet,
   ...props
 }: {
@@ -222,5 +224,6 @@ export const ServerTweetCard = ({
 }) => {
   return <MyTweet tweet={tweet} {...props} />
 }
+export default ServerTweetCard;
 
 export default TweetCard

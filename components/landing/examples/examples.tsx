@@ -515,7 +515,7 @@ type ItemProps = {
   onSelectExample: (item: FormProps | null) => void
 }
 
-function Item({ item, onSelectExample }: ItemProps) {
+const Item = ({ item, onSelectExample }: ItemProps) => {
   return (
     <div
       onClick={() => {
@@ -529,6 +529,8 @@ function Item({ item, onSelectExample }: ItemProps) {
     </div>
   )
 }
+
+export default Item;
 
 const firstRowExamples = [
   exampleFormValues.rickAndMortyCharacters,

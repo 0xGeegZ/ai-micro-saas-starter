@@ -12,17 +12,18 @@ interface DotPatternProps {
   className?: string;
   [key: string]: any;
 }
-export function DotPattern({
-  width = 16,
-  height = 16,
-  x = 0,
-  y = 0,
-  cx = 1,
-  cy = 1,
-  cr = 1,
-  className,
-  ...props
-}: DotPatternProps) {
+const DotPattern = (props: DotPatternProps) => {
+  const {
+    width = 16,
+    height = 16,
+    x = 0,
+    y = 0,
+    cx = 1,
+    cy = 1,
+    cr = 1,
+    className,
+    ...restProps
+  } = props;
   const id = useId();
 
   return (
@@ -32,7 +33,7 @@ export function DotPattern({
         "pointer-events-none absolute inset-0 h-full w-full fill-gray-400/40",
         className
       )}
-      {...props}
+      {...restProps}
     >
       <defs>
         <pattern
@@ -50,6 +51,8 @@ export function DotPattern({
       <rect width="100%" height="100%" strokeWidth={0} fill={`url(#${id})`} />
     </svg>
   );
-}
+};
+
+export default DotPattern;
 
 export default DotPattern;

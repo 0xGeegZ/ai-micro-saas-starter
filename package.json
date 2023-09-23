@@ -61,7 +61,7 @@
     "framer-motion": "^10.16.4",
     "lucide-react": "^0.259.0",
     "maath": "^0.9.0",
-    "million": "2.6.0",
+    "million": "2.6.0-beta.16",
     "next": "13.5.2",
     "next-themes": "^0.2.1",
     "openai": "^3.3.0",

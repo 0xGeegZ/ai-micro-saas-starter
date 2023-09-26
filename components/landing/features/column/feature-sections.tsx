@@ -2,6 +2,7 @@
 
 import { Icons } from "@/components/icons"
 import { buttonVariants } from "@/components/ui/button"
+import { MAIN_COLOR } from "@/config/constants"
 import { cn } from "@/lib/utils"
 import { List } from "lucide-react"
 import Link from "next/link"
@@ -57,7 +58,12 @@ const FeatureSections = () => {
                   "lg:order-last": feature.reverse,
                 })}
               >
-                <h2 className="text-base font-semibold leading-7 text-orange-600">
+                <h2
+                  className={cn(
+                    "text-base font-semibold leading-7",
+                    MAIN_COLOR
+                  )}
+                >
                   {feature.header}
                 </h2>
                 <p className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">

@@ -26,7 +26,13 @@ import {
 } from "@/components/ui/select"
 import { useProModal } from "@/lib/hooks/use-pro-modal"
 
-import { amountOptions, formSchema, resolutionOptions } from "./constants"
+import {
+  amountOptions,
+  formSchema,
+  imageNavItems,
+  resolutionOptions,
+} from "./constants"
+import { SubNav } from "@/components/sub-nav"
 
 const PhotoPage = () => {
   const proModal = useProModal()
@@ -73,6 +79,7 @@ const PhotoPage = () => {
         iconColor="text-pink-700"
         bgColor="bg-pink-700/10"
       />
+      <SubNav nav={imageNavItems} />
       <div className="px-4 lg:px-8">
         <Form {...form}>
           <form

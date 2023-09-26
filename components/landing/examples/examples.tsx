@@ -1,9 +1,11 @@
 "use client"
-import { TypographyH1, TypographyP } from "@/components/ui/typography"
+import { TypographyP } from "@/components/ui/typography"
 import { FormProps } from "@/lib/hooks/use-playground-form"
 import React from "react"
 import { ExampleOutputDialog } from "./example-output-dialog"
 import Marquee from "@/components/magicui/marquee"
+import { RADIAN_BACKGROUND } from "@/config/constants"
+import { cn } from "@/lib/utils"
 
 export const exampleFormValues: {
   [key: string]: FormProps & {
@@ -551,39 +553,47 @@ export function Examples() {
     React.useState<FormProps | null>(null)
 
   return (
-    <div className="w-full items-center justify-start">
-      <div className="w-full">
-        <TypographyH1 className="!text-3xl font-semibold !mb-0">
-          See examples
-        </TypographyH1>
-        <TypographyP className="text-xl text-muted-foreground !mt-2 mb-8">
-          You can see more examples. Select one of the prompts below.
-        </TypographyP>
+    <section id="examples" className="relative">
+      <div className="py-14 space-y-14">
+        <div className="mx-auto max-w-md text-center sm:max-w-2xl">
+          <h2 className="font-display text-4xl font-bold leading-tight sm:text-5xl sm:leading-tight">
+            Try one of our{" "}
+            <span
+              className={cn("bg-clip-text text-transparent", RADIAN_BACKGROUND)}
+            >
+              10 examples
+            </span>{" "}
+          </h2>
+
+          <p className="mt-5 text-muted-foreground sm:text-lg">
+            You can see more examples. Select one of the prompts below.
+          </p>
+        </div>
+        <ExampleOutputDialog
+          item={selectedExample}
+          setOpen={() => setSelectedExample(null)}
+        />
+        <div className="flex gap-4 flex-col w-full max-w-[90vw]">
+          <Marquee pauseOnHover className="[--duration:40s]">
+            {firstRowExamples.map((item, index) => (
+              <Item
+                key={`example-${item.prompt}-${index}`}
+                item={item}
+                onSelectExample={setSelectedExample}
+              />
+            ))}
+          </Marquee>
+          <Marquee pauseOnHover reverse className="[--duration:40s]">
+            {secondRowExamples.map((item, index) => (
+              <Item
+                key={`example-row-2-${item.prompt}-${index}`}
+                item={item}
+                onSelectExample={setSelectedExample}
+              />
+            ))}
+          </Marquee>
+        </div>
       </div>
-      <ExampleOutputDialog
-        item={selectedExample}
-        setOpen={() => setSelectedExample(null)}
-      />
-      <div className="flex gap-4 flex-col w-full max-w-[90vw]">
-        <Marquee pauseOnHover className="[--duration:40s]">
-          {firstRowExamples.map((item, index) => (
-            <Item
-              key={`example-${item.prompt}-${index}`}
-              item={item}
-              onSelectExample={setSelectedExample}
-            />
-          ))}
-        </Marquee>
-        <Marquee pauseOnHover reverse className="[--duration:40s]">
-          {secondRowExamples.map((item, index) => (
-            <Item
-              key={`example-row-2-${item.prompt}-${index}`}
-              item={item}
-              onSelectExample={setSelectedExample}
-            />
-          ))}
-        </Marquee>
-      </div>
-    </div>
+    </section>
   )
 }

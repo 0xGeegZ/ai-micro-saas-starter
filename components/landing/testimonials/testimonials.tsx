@@ -1,5 +1,7 @@
 import Marquee from "@/components/magicui/marquee"
 import { ServerTweetCard } from "@/components/magicui/tweet-card"
+import { RADIAN_BACKGROUND } from "@/config/constants"
+import { cn } from "@/lib/utils"
 import { getTweet } from "react-tweet/api"
 
 const tweetIds = [
@@ -56,11 +58,15 @@ export default async function Testimonials() {
         <div className="mx-auto max-w-md text-center sm:max-w-2xl">
           <h2 className="font-display text-4xl font-bold leading-tight sm:text-5xl sm:leading-tight">
             Loved by{" "}
-            <span className="bg-gradient-to-r from-red-600 to-amber-600 bg-clip-text text-transparent">
+            <span
+              className={cn("bg-clip-text text-transparent", RADIAN_BACKGROUND)}
+            >
               3,000+ users
             </span>{" "}
             and{" "}
-            <span className="bg-gradient-to-r from-red-600 to-amber-600 bg-clip-text text-transparent">
+            <span
+              className={cn("bg-clip-text text-transparent", RADIAN_BACKGROUND)}
+            >
               companies
             </span>{" "}
             worldwide

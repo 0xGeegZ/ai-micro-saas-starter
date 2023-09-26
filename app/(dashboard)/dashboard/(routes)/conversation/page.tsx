@@ -22,6 +22,18 @@ import { Empty } from "@/components/ui/empty"
 import { useProModal } from "@/lib/hooks/use-pro-modal"
 
 import { formSchema } from "./constants"
+import { SubNav } from "@/components/sub-nav"
+
+const nav = [
+  {
+    title: "Conversation",
+    href: "/dashboard/conversation",
+  },
+  {
+    title: "History",
+    href: "/dashboard/conversation/history",
+  },
+]
 
 const ConversationPage = () => {
   const router = useRouter()
@@ -71,6 +83,7 @@ const ConversationPage = () => {
         iconColor="text-violet-500"
         bgColor="bg-violet-500/10"
       />
+      <SubNav nav={nav} />
       <div className="px-4 lg:px-8">
         <div>
           <Form {...form}>

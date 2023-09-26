@@ -1,5 +1,6 @@
 import { Icons } from "@/components/icons"
 import { buttonVariants } from "@/components/ui/button"
+import { MAIN_COLOR } from "@/config/constants"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import Link from "next/link"
@@ -9,7 +10,7 @@ export default async function Community() {
     <section id="community">
       <div className="max-w-screen-xl mx-auto px-4 md:text-center md:px-8 py-20">
         <div className="max-w-xl space-y-3 md:mx-auto">
-          <h3 className="text-orange-600 font-semibold">Community</h3>
+          <h3 className={cn("font-semibold", MAIN_COLOR)}>Community</h3>
           <p className="text-accent-foreground text-3xl font-semibold sm:text-4xl">
             Join our community
           </p>

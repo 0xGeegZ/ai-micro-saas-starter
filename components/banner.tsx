@@ -1,10 +1,17 @@
 import { siteConfig } from "@/config/site"
 import Link from "next/link"
 import { Icons } from "./icons"
+import { RADIAN_BACKGROUND } from "@/config/constants"
+import { cn } from "@/lib/utils"
 
 const Banner = () => {
   return (
-    <div className="relative isolate flex items-center gap-x-6 overflow-hidden  px-6 py-2.5 sm:px-3.5 justify-center bg-gradient-to-br from-red-600 to-amber-600 z-50">
+    <div
+      className={cn(
+        "relative isolate flex items-center gap-x-6 overflow-hidden  px-6 py-2.5 sm:px-3.5 justify-center z-50",
+        RADIAN_BACKGROUND
+      )}
+    >
       <Link
         href={siteConfig.links.github}
         target="_blank"

@@ -1,12 +1,9 @@
 "use client"
-
-import { ArrowRight } from "lucide-react"
 import { useRouter } from "next/navigation"
 
-import { Card } from "@/components/ui/card"
-import { cn } from "@/lib/utils"
-
 import { tools } from "@/config/application"
+import { Icons } from "@/components/icons"
+import ApplicationCard from "@/components/application-card"
 
 export default function HomePage() {
   const router = useRouter()
@@ -22,21 +19,36 @@ export default function HomePage() {
         </p>
       </div>
       <div className="px-4 md:px-20 lg:px-32 space-y-4">
-        {tools.map((tool) => (
-          <Card
-            onClick={() => router.push(tool.href)}
-            key={tool.href}
-            className="p-4 border-black/5 flex items-center justify-between hover:shadow-md transition cursor-pointer"
-          >
-            <div className="flex items-center gap-x-4">
-              <div className={cn("p-2 w-fit rounded-md", tool.bgColor)}>
-                <tool.icon className={cn("w-8 h-8", tool.color)} />
-              </div>
-              <div className="font-semibold">{tool.label}</div>
-            </div>
-            <ArrowRight className="w-5 h-5" />
-          </Card>
-        ))}
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 place-items-center lg:gap-5 px-4 md:px-8">
+          {tools.map((tool) => {
+            const Icon = tool.icon
+            return (
+              <ApplicationCard
+                key={tool.href}
+                card={{
+                  title: tool.label,
+                  description:
+                    "Create a call and invite others to join in conversation, discussion, or collaboration.",
+                  href: tool.href,
+                  // icon: <Icon className={tool.color} width={24} height={24} />,
+                  icon: <Icon color="white" width={24} height={24} />,
+                  buttonText: "Launch",
+                  loadingIcon: (
+                    <Icons.spinner color="#0F172A" width={14} height={14} />
+                  ),
+                  buttonIcon: (
+                    <Icons.add
+                      color="#0F172A"
+                      className="ml-2"
+                      width={16}
+                      height={16}
+                    />
+                  ),
+                }}
+              />
+            )
+          })}
+        </div>
       </div>
     </div>
   )

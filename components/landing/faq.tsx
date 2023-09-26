@@ -19,21 +19,11 @@ const FAQ = () => {
         <Accordion type="single" collapsible>
           <AccordionItem value="item-1">
             <AccordionTrigger>How does it work?</AccordionTrigger>
-            <AccordionContent>
-              We provide 2 solutions. The first is a no-code solution which
-              requires you to enter your OpenAI API key to get access to a
-              dashboard of analytics. The second is a code-based solution which
-              requires you to install our SDK in your app.
-            </AccordionContent>
+            <AccordionContent>Service description content</AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
             <AccordionTrigger>What is your pricing?</AccordionTrigger>
-            <AccordionContent>
-              We have a free plan which allows you to track up to 100,000
-              requests every month. We also have a paid plan targeted towards
-              startups and enterprises which allow you to track unlimited
-              requests.
-            </AccordionContent>
+            <AccordionContent>Pricing description content</AccordionContent>
           </AccordionItem>
         </Accordion>
       </div>

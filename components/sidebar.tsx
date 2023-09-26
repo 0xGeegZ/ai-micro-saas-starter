@@ -1,66 +1,30 @@
 "use client"
-
 import Link from "next/link"
 import Image from "next/image"
 import { Montserrat } from "next/font/google"
-import {
-  Code,
-  ImageIcon,
-  LayoutDashboard,
-  MessageSquare,
-  Music,
-  Settings,
-  VideoIcon,
-} from "lucide-react"
 import { usePathname } from "next/navigation"
 
 import { cn } from "@/lib/utils"
 import { FreeCounter } from "@/components/free-counter"
 import { siteConfig } from "@/config/site"
+import { tools } from "@/config/application"
+import { Icons } from "./icons"
 
 const poppins = Montserrat({ weight: "600", subsets: ["latin"] })
 
 const routes = [
   {
     label: "Dashboard",
-    icon: LayoutDashboard,
+    icon: Icons.sparkles,
     href: "/dashboard",
-    color: "text-sky-500",
+    color: "text-white",
   },
-  {
-    label: "Conversation",
-    icon: MessageSquare,
-    href: "/conversation",
-    color: "text-violet-500",
-  },
-  {
-    label: "Image Generation",
-    icon: ImageIcon,
-    color: "text-pink-700",
-    href: "/image",
-  },
-  {
-    label: "Video Generation",
-    icon: VideoIcon,
-    color: "text-orange-700",
-    href: "/video",
-  },
-  {
-    label: "Music Generation",
-    icon: Music,
-    color: "text-emerald-500",
-    href: "/music",
-  },
-  {
-    label: "Code Generation",
-    icon: Code,
-    color: "text-green-700",
-    href: "/code",
-  },
+  ...tools,
   {
     label: "Settings",
-    icon: Settings,
-    href: "/settings",
+    icon: Icons.settings,
+    href: "/dashboard/settings",
+    color: "",
   },
 ]
 
@@ -97,7 +61,7 @@ export const Sidebar = ({
               )}
             >
               <div className="flex items-center flex-1">
-                <route.icon className={cn("h-5 w-5 mr-3", route.color)} />
+                <route.icon className={cn("h-5 w-5 mr-3", route?.color)} />
                 {route.label}
               </div>
             </Link>

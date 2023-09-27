@@ -29,7 +29,7 @@ export const LandingNavbar = () => {
         <ThemeToggle />
         <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
           <Button variant="default" className="rounded-full">
-            Get Started
+            {isSignedIn ? "Dashboard" : "Get Started"}
           </Button>
         </Link>
       </div>

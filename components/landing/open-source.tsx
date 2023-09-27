@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Button } from "../ui/button"
 import { Icons } from "../icons"
+import { siteConfig } from "@/config/site"
 
 export const OpenSource = () => {
   return (
@@ -8,19 +9,15 @@ export const OpenSource = () => {
       <div className="w-full max-w-7xl flex flex-col items-center text-center gap-4 bg-foreground rounded-xl py-8 px-5 sm:p-12">
         <div>
           <h2 className="text-[30px] leading-9 max-w-[300px] text-muted mx-auto sm:max-w-none sm:text-4xl md:text font-semibold mb-4">
-            This is an open source project
+            Proudly open source
           </h2>
           <p className="text-muted-foreground text-base sm:text-lg">
-            Callsquare is open source. Check out the GitHub repository to get
-            started.
+            {siteConfig.name} is open source. Check out the GitHub repository to
+            get started.
           </p>
         </div>
 
-        <Link
-          href="https://github.com/JaleelB/callsquare"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <Link href={siteConfig.links.github} target="_blank" rel="noreferrer">
           <Button
             size="lg"
             variant={"secondary"}

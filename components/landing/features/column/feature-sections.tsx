@@ -9,37 +9,40 @@ import Link from "next/link"
 
 const features = [
   {
-    id: "feature-openai",
-    header: "Analyze",
-    name: "Advanced OpenAI API Dashboard",
+    id: "feature-ai",
+    header: "AI Feature 1",
+    name: "AI Feature Name 1",
     description:
-      "Just enter your OpenAI API key, and we fetch your data from the OpenAI API directly to create a dashboard. No need to install anything.",
+      "Description for AI Feature 1. This feature provides advanced AI capabilities to your application, enhancing its functionality and user experience.",
     icon: Icons.openai,
-    video: "https://cdn.llm.report/openai-demo.mp4",
+    video:
+      "https://static.videezy.com/system/resources/previews/000/022/066/original/4k-dynamic-preloader-with-dots-animation.mp4",
     cta: "Get Started",
     href: "/login",
     reverse: false,
   },
   {
-    id: "feature-logs",
-    header: "Optimize",
-    name: "Log your prompts and completions",
+    id: "feature-ai-2",
+    header: "AI Feature 2",
+    name: "AI Feature Name 2",
     description:
-      "Change 1 line in your code and start logging your API requests. Optimize your token usage and start saving money.",
+      "Description for AI Feature 2. This feature leverages AI to provide unique insights and analytics, helping you make data-driven decisions.",
     icon: List,
-    video: "https://cdn.llm.report/logs-demo.mp4",
+    video:
+      "https://static.videezy.com/system/resources/previews/000/022/066/original/4k-dynamic-preloader-with-dots-animation.mp4",
     cta: "Get Started",
     href: "/login",
     reverse: true,
   },
   {
-    id: "feature-users",
-    header: "Minimize",
-    name: "Measure Cost Per User",
+    id: "feature-ai-3",
+    header: "AI Feature 3",
+    name: "AI Feature Name 3",
     description:
-      "Analyze your cost per user and adjust your pricing to maximize revenue.",
+      "Description for AI Feature 3. This feature uses AI to personalize user experiences, making your application more engaging and user-friendly.",
     icon: Icons.user,
-    video: "https://cdn.llm.report/users-demo.mp4",
+    video:
+      "https://static.videezy.com/system/resources/previews/000/022/066/original/4k-dynamic-preloader-with-dots-animation.mp4",
     cta: "Get Started",
     href: "/login",
     reverse: false,

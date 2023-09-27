@@ -139,7 +139,7 @@ const HeroSecondary = () => {
           <Suspense fallback={<div>Loading...</div>}>
             {/* <Dashboard /> */}
             <video
-              src="https://cdn.llm.report/openai-demo.mp4"
+              src="https://static.videezy.com/system/resources/previews/000/022/066/original/4k-dynamic-preloader-with-dots-animation.mp4"
               autoPlay
               loop
               muted

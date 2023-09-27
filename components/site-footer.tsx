@@ -2,6 +2,7 @@ import { Icons } from "@/components/icons"
 import { siteConfig } from "@/config/site"
 import { DiscordLogoIcon } from "@radix-ui/react-icons"
 import Link from "next/link"
+import Image from "next/image"
 
 const footerNavs = [
   {
@@ -90,9 +91,11 @@ export function SiteFooter() {
         <div className="md:flex md:justify-between p-4 py-16 sm:pb-24 gap-4">
           <div className="mb-12 flex-col flex gap-4">
             <Link href="/" className="flex items-center gap-2">
-              <Icons.logo className="h-8 w-8 text-primary" />
+              <div className="relative h-8 w-8">
+                <Image fill alt="Logo" src="/logo.png" />
+              </div>
               <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                llm.report
+                {siteConfig.name}
               </span>
             </Link>
             <p className="max-w-xs">{siteConfig.description}</p>

@@ -2,9 +2,9 @@ lockfileVersion: 5.4
 
 specifiers:
   '@atlaskit/code': ^14.6.7
-  '@clerk/nextjs': ^4.23.5
+  '@clerk/nextjs': ^4.25.3
   '@hookform/resolvers': ^3.3.1
-  '@prisma/client': ^5.0.0
+  '@prisma/client': ^5.4.2
   '@radix-ui/react-accordion': ^1.1.2
   '@radix-ui/react-alert-dialog': ^1.0.4
   '@radix-ui/react-aspect-ratio': ^1.0.3
@@ -34,7 +34,7 @@ specifiers:
   '@radix-ui/react-tooltip': ^1.0.6
   '@react-three/drei': ^9.83.9
   '@react-three/fiber': ^8.14.2
-  '@t3-oss/env-nextjs': ^0.6.1
+  '@t3-oss/env-nextjs': ^0.7.0
   '@tanstack/react-table': ^8.10.0
   '@types/node': 20.4.1
   '@types/react': 18.2.14
@@ -79,9 +79,9 @@ specifiers:
 
 dependencies:
   '@atlaskit/code': 14.6.7_qzycrpzqvmvb7wd2jdibmpq2cy
-  '@clerk/nextjs': 4.23.5_4y43qwndsqhk2jamjcqfkv34zy
+  '@clerk/nextjs': 4.25.3_4y43qwndsqhk2jamjcqfkv34zy
   '@hookform/resolvers': 3.3.1_react-hook-form@7.46.1
-  '@prisma/client': 5.3.1_prisma@5.4.2
+  '@prisma/client': 5.4.2_prisma@5.4.2
   '@radix-ui/react-accordion': 1.1.2_hrrtw4it2dqo6rzcqzvl36ff7i
   '@radix-ui/react-alert-dialog': 1.0.4_hrrtw4it2dqo6rzcqzvl36ff7i
   '@radix-ui/react-aspect-ratio': 1.0.3_hrrtw4it2dqo6rzcqzvl36ff7i
@@ -111,7 +111,7 @@ dependencies:
   '@radix-ui/react-tooltip': 1.0.6_hrrtw4it2dqo6rzcqzvl36ff7i
   '@react-three/drei': 9.83.9_2nj7uhf5hijlbvy4xpa6x4tfgy
   '@react-three/fiber': 8.14.2_biqbaboplfbrettd7655fr4n2y
-  '@t3-oss/env-nextjs': 0.6.1_7ffzfhm45svvrewwadhunj76bu
+  '@t3-oss/env-nextjs': 0.7.0_7ffzfhm45svvrewwadhunj76bu
   '@tanstack/react-table': 8.10.0_biqbaboplfbrettd7655fr4n2y
   '@types/node': 20.4.1
   '@types/react': 18.2.14
@@ -577,11 +577,12 @@ packages:
       to-fast-properties: 2.0.0
     dev: false
 
-  /@clerk/backend/0.29.0:
-    resolution: {integrity: sha512-2miuqyzmlzboTcLQOtafGw4+InnkFALMWjM9l9gu75KBWg1pUdFYLEDcJV+MHt0ZtY+pZO7aGnPE0Mf7QnG+bA==}
+  /@clerk/backend/0.30.3_react@18.2.0:
+    resolution: {integrity: sha512-fEQqfIUevBeHvPXoPP/hoocdAd0tond/cDgG65U7sO3zirmVBpNVI91074pctXBoQGa7QCzs52ZvIBssfaag9w==}
     engines: {node: '>=14'}
     dependencies:
-      '@clerk/types': 3.51.0
+      '@clerk/shared': 0.24.3_react@18.2.0
+      '@clerk/types': 3.54.0
       '@peculiar/webcrypto': 1.4.1
       '@types/node': 16.18.6
       cookie: 0.5.0
@@ -589,46 +590,51 @@ packages:
       node-fetch-native: 1.0.1
       snakecase-keys: 5.4.4
       tslib: 2.4.1
+    transitivePeerDependencies:
+      - react
     dev: false
 
-  /@clerk/clerk-react/4.24.2_react@18.2.0:
-    resolution: {integrity: sha512-nMxhtByDMJ4kXoUu2j75tS9NyEI5S0KI3Zj67WhGxVMAUGbOYPI6gmTv6exORb5kVALF0QmS4FGyOGQ2WZJd3A==}
+  /@clerk/clerk-react/4.26.3_react@18.2.0:
+    resolution: {integrity: sha512-ge77CuKSPl85YU6476icA4F/bEzgcpjTjHikR4ae1ykHsKGANcL63F4whnQ8deP0MpfM6hahkhdVlcTGApLMzA==}
     engines: {node: '>=14'}
     peerDependencies:
       react: '>=16'
     dependencies:
-      '@clerk/shared': 0.22.0_react@18.2.0
-      '@clerk/types': 3.51.0
+      '@clerk/shared': 0.24.3_react@18.2.0
+      '@clerk/types': 3.54.0
       react: 18.2.0
       tslib: 2.4.1
     dev: false
 
-  /@clerk/clerk-sdk-node/4.12.5:
-    resolution: {integrity: sha512-GW0eXhG2P7GCFKnc2j7zOAR2qK0fOQwoZAFvfovXJNyZhlcbg7NKtjsbW6Q8X7qrtaD2UX6SuOvuxQZP633H7w==}
+  /@clerk/clerk-sdk-node/4.12.12_react@18.2.0:
+    resolution: {integrity: sha512-k9nSSgFpHfW/vda6beLWSYmTiR7I2lhCYWsj58Ik/H0AB7UXIoxoWMbSGjCZE9iDlaeo8pazycOIbZpxhzdHPg==}
     engines: {node: '>=14'}
     dependencies:
-      '@clerk/backend': 0.29.0
-      '@clerk/types': 3.51.0
+      '@clerk/backend': 0.30.3_react@18.2.0
+      '@clerk/types': 3.54.0
       '@types/cookies': 0.7.7
       '@types/express': 4.17.14
       '@types/node-fetch': 2.6.2
       camelcase-keys: 6.2.2
       snakecase-keys: 3.2.1
       tslib: 2.4.1
+    transitivePeerDependencies:
+      - react
     dev: false
 
-  /@clerk/nextjs/4.23.5_4y43qwndsqhk2jamjcqfkv34zy:
-    resolution: {integrity: sha512-SG8ooFEC5P6lLa1G+239zUu4ciLwmoPei8CnhPzKQ9u90J9ly/j9wVVBm1AX3rY4G+1xMVyR42PUC7wjfvxhoA==}
+  /@clerk/nextjs/4.25.3_4y43qwndsqhk2jamjcqfkv34zy:
+    resolution: {integrity: sha512-z1vLfcN+VVr1rpiPpIL6bYsZrsPwW9YuOpdoXLi+V4aTz4VfW9o1cAnZIBQdHat/jD5cgsocpYBWN1F4EFksoQ==}
     engines: {node: '>=14'}
     peerDependencies:
       next: '>=10'
       react: ^17.0.2 || ^18.0.0-0
       react-dom: ^17.0.2 || ^18.0.0-0
     dependencies:
-      '@clerk/backend': 0.29.0
-      '@clerk/clerk-react': 4.24.2_react@18.2.0
-      '@clerk/clerk-sdk-node': 4.12.5
-      '@clerk/types': 3.51.0
+      '@clerk/backend': 0.30.3_react@18.2.0
+      '@clerk/clerk-react': 4.26.3_react@18.2.0
+      '@clerk/clerk-sdk-node': 4.12.12_react@18.2.0
+      '@clerk/shared': 0.24.3_react@18.2.0
+      '@clerk/types': 3.54.0
       next: 13.5.4_biqbaboplfbrettd7655fr4n2y
       path-to-regexp: 6.2.1
       react: 18.2.0
@@ -636,8 +642,8 @@ packages:
       tslib: 2.4.1
     dev: false
 
-  /@clerk/shared/0.22.0_react@18.2.0:
-    resolution: {integrity: sha512-AHPypu9gZ3v44PRqiMA56c+YNLc2IzLaPUyiYFYU+xeH/R+wqzGp7OxZoZr/kmzgA8taiVl/bjixWgpuZwzI3A==}
+  /@clerk/shared/0.24.3_react@18.2.0:
+    resolution: {integrity: sha512-fZ0inqzP7hSDW8BUtIutqAt3YrOw/7ZDXxc3vRDMqY0shR8V6KXM7xdGS1dPV2qGxCBhBVbXRA/oFdKhO7PhJg==}
     peerDependencies:
       react: '>=16'
     dependencies:
@@ -647,8 +653,8 @@ packages:
       swr: 2.2.0_react@18.2.0
     dev: false
 
-  /@clerk/types/3.51.0:
-    resolution: {integrity: sha512-JCSG2W1nI+zEIyDTGKfQJkvl2Ve5vpR3AxDsyXQMf/aZyXhBT351W1dPUfUW4K9MpLmZ2sB/1gj3UJFaBw9e7g==}
+  /@clerk/types/3.54.0:
+    resolution: {integrity: sha512-ZFS8Vz2elyxzupuTd7VO++TrzMmbhsgszriDSQKGCf69KeegZqGJ8QhzUWMcB7Ro/991bUKbZ56QF3x49j8Lbg==}
     engines: {node: '>=14'}
     dependencies:
       csstype: 3.1.1
@@ -1025,8 +1031,8 @@ packages:
     resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
     dev: false
 
-  /@prisma/client/5.3.1_prisma@5.4.2:
-    resolution: {integrity: sha512-ArOKjHwdFZIe1cGU56oIfy7wRuTn0FfZjGuU/AjgEBOQh+4rDkB6nF+AGHP8KaVpkBIiHGPQh3IpwQ3xDMdO0Q==}
+  /@prisma/client/5.4.2_prisma@5.4.2:
+    resolution: {integrity: sha512-2xsPaz4EaMKj1WS9iW6MlPhmbqtBsXAOeVttSePp8vTFTtvzh2hZbDgswwBdSCgPzmmwF+tLB259QzggvCmJqA==}
     engines: {node: '>=16.13'}
     requiresBuild: true
     peerDependencies:
@@ -1035,12 +1041,12 @@ packages:
       prisma:
         optional: true
     dependencies:
-      '@prisma/engines-version': 5.3.1-2.61e140623197a131c2a6189271ffee05a7aa9a59
+      '@prisma/engines-version': 5.4.1-2.ac9d7041ed77bcc8a8dbd2ab6616b39013829574
       prisma: 5.4.2
     dev: false
 
-  /@prisma/engines-version/5.3.1-2.61e140623197a131c2a6189271ffee05a7aa9a59:
-    resolution: {integrity: sha512-y5qbUi3ql2Xg7XraqcXEdMHh0MocBfnBzDn5GbV1xk23S3Mq8MGs+VjacTNiBh3dtEdUERCrUUG7Z3QaJ+h79w==}
+  /@prisma/engines-version/5.4.1-2.ac9d7041ed77bcc8a8dbd2ab6616b39013829574:
+    resolution: {integrity: sha512-wvupDL4AA1vf4TQNANg7kR7y98ITqPsk6aacfBxZKtrJKRIsWjURHkZCGcQliHdqCiW/hGreO6d6ZuSv9MhdAA==}
     dev: false
 
   /@prisma/engines/5.4.2:
@@ -2685,23 +2691,29 @@ packages:
       tslib: 2.6.2
     dev: false
 
-  /@t3-oss/env-core/0.6.1_7ffzfhm45svvrewwadhunj76bu:
-    resolution: {integrity: sha512-KQD7qEDJtkWIWWmTVjNvk0wnHpkvAQ6CRbUxbWMFNG/fiosBQDQvtRpBNu6USxBscJCoC4z6y7P9MN52/mLOzw==}
+  /@t3-oss/env-core/0.7.0_7ffzfhm45svvrewwadhunj76bu:
+    resolution: {integrity: sha512-cgunN82CqgQOOyuMOK/bGtujX5/ooXQTwGMJVWI6mCowq6WE5EgRLOqF/DRcrElI0gSFGA9i9GrxzCnk73HZLQ==}
     peerDependencies:
       typescript: '>=4.7.2'
       zod: ^3.0.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     dependencies:
       typescript: 5.1.6
       zod: 3.22.2
     dev: false
 
-  /@t3-oss/env-nextjs/0.6.1_7ffzfhm45svvrewwadhunj76bu:
-    resolution: {integrity: sha512-z1dIC++Vxj9kmzX5nSPfcrCSkszy3dTEPC4Ssx7Ap5AqR3c2Qa7S0xf8axn6coy7D/vCXDAAnHYnCMDhtcY3SQ==}
+  /@t3-oss/env-nextjs/0.7.0_7ffzfhm45svvrewwadhunj76bu:
+    resolution: {integrity: sha512-rjQIt6P3tac2eRx4BNQLNaJ+AIb2P8wXw4uFvYbEekqMGShikkUALnX3hUn1twYiGVGHXRm6UbU+LqtjIktuGg==}
     peerDependencies:
       typescript: '>=4.7.2'
       zod: ^3.0.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     dependencies:
-      '@t3-oss/env-core': 0.6.1_7ffzfhm45svvrewwadhunj76bu
+      '@t3-oss/env-core': 0.7.0_7ffzfhm45svvrewwadhunj76bu
       typescript: 5.1.6
       zod: 3.22.2
     dev: false

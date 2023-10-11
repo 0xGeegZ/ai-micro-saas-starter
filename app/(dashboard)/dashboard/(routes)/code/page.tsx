@@ -22,19 +22,8 @@ import { UserAvatar } from "@/components/user-avatar"
 import { Empty } from "@/components/ui/empty"
 import { useProModal } from "@/lib/hooks/use-pro-modal"
 
-import { formSchema } from "./constants"
+import { codeNavItems, formSchema } from "./constants"
 import { SubNav } from "@/components/sub-nav"
-
-const nav = [
-  {
-    title: "Code",
-    href: "/dashboard/code",
-  },
-  {
-    title: "History",
-    href: "/dashboard/code/history",
-  },
-]
 
 const CodePage = () => {
   const router = useRouter()
@@ -82,7 +71,7 @@ const CodePage = () => {
         iconColor="text-green-700"
         bgColor="bg-green-700/10"
       />
-      <SubNav nav={nav} />
+      <SubNav nav={codeNavItems} />
       <div className="px-4 lg:px-8">
         <div>
           <Form {...form}>

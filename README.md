@@ -1,25 +1,29 @@
 # Micro SaaS AI Starter with Next.js 13, React, Tailwind, Prisma, Stripe & GeneratedBy API
 
-> **Note:** This project is a fork of [next13-ai-saas](https://github.com/AntonioErdeljac/next13-ai-saas) by Antonio Erdeljac.
-
 ![Micro SaaS AI Starter](https://github.com/0xGeegZ/ai-micro-saas-starter/blob/master/public/repo-amin-image.png?raw=true)
 
-This is a repository for Build a Micro SaaS AI Platform with Next.js 13, React, Tailwind, Prisma, Stripe and GeneratedBy for the AI part.
+> **Note:** This project is a fork of [next13-ai-saas](https://github.com/AntonioErdeljac/next13-ai-saas) by Antonio Erdeljac.
+
+This is a repository for Build a Micro SaaS AI Platform with Next.js 13, Shadcn, Prisma, Stripe and GeneratedBy for the AI part.
 
 Features:
 
 - AI prompts folders to generate main project pages (Terms, FAQ, Privacy Policy, About, Documentation, etc.)
-- Tailwind design
-- Tailwind animations and effects
-- Full responsiveness
-- Clerk Authentication (Email, Google, 9+ Social Logins)
-- Client form validation and handling using react-hook-form
-- Server error handling using react-toast
-- GeneratedBy Prompt based Application connectors
-- Page loading state
-- Stripe monthly subscription
+- Folder structure in [Next 13 App Router](https://nextjs.org/docs/app)
+- [Shadcn](https://ui.shadcn.com/) UI on top of Radix UI
+- [Tailwind](https://tailwindcss.com/docs/installation) & [Framer Motion](https://www.framer.com/motion/) animations and effects
+- [Clerk Authentication](https://clerk.com/docs) (Email, Google, 9+ Social Logins)
+- Client form validation and handling using [react-hook-form](https://react-hook-form.com/get-started)
+- Server error handling using [react-toast](https://react-hot-toast.com/docs)
+- [GeneratedBy](https://generatedby.com/docs) Prompt based Application API
+- [Stripe](https://stripe.com/docs) monthly subscription
 - Free tier with API limiting
-- Folder structure in Next 13 App Router
+- Full responsiveness
+
+> **Note:** Took some piece of code from open source projects :
+>
+> - [llm.report](https://github.com/dillionverma/llm.report) by Dillion Verma.
+> - [callsquare](https://github.com/JaleelB/callsquare) by Jaleel Bennett.
 
 ## AI Prompts Directory
 

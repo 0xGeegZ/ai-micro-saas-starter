@@ -17,19 +17,9 @@ import { Loader } from "@/components/loader"
 import { Empty } from "@/components/ui/empty"
 import { useProModal } from "@/lib/hooks/use-pro-modal"
 
-import { formSchema } from "./constants"
+import { formSchema, musicNavItems } from "./constants"
 import { SubNav } from "@/components/sub-nav"
 
-const nav = [
-  {
-    title: "Music",
-    href: "/dashboard/music",
-  },
-  {
-    title: "History",
-    href: "/dashboard/music/history",
-  },
-]
 const MusicPage = () => {
   const proModal = useProModal()
   const router = useRouter()
@@ -73,7 +63,7 @@ const MusicPage = () => {
         iconColor="text-emerald-500"
         bgColor="bg-emerald-500/10"
       />
-      <SubNav nav={nav} />
+      <SubNav nav={musicNavItems} />
       <div className="px-4 lg:px-8">
         <Form {...form}>
           <form

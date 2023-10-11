@@ -6,5 +6,12 @@ draft: True
 description: "This is a repository for Build a Micro SaaS AI Platform with Next.js 13, React, Tailwind, Prisma, Stripe and GeneratedBy for the AI part."
 docs:
   NextJs: ["https://nextjs.org/docs", "Documentation for Next.js framework"]
+  GeneratedBy:
+    ["https://generatedby.com/docs", "Documentation for GeneratedBy API"]
   VercelAiPackage:
     ["https://sdk.vercel.ai/docs", "Vercel SDK for AI operations"]
+rules:
+  - There should not be commented out code in the code you write.
+  - There should not be any TODOs in the code you write.
+  - There should not be any FIXMEs in the code you write.
+  - There should not be any console.log statements in the code you write.

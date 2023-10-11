@@ -8,6 +8,7 @@ This is a repository for Build a Micro SaaS AI Platform with Next.js 13, React, 
 
 Features:
 
+- AI prompts folders to generate main project pages (Terms, FAQ, Privacy Policy, About, Documentation, etc.)
 - Tailwind design
 - Tailwind animations and effects
 - Full responsiveness
@@ -19,6 +20,24 @@ Features:
 - Stripe monthly subscription
 - Free tier with API limiting
 - Folder structure in Next 13 App Router
+
+## AI Prompts Directory
+
+The [prompts](./prompts) directory contains a collection of AI prompts that can be used to generate useful content and information for a Software as a Service (SaaS) business. Here is a brief overview of the prompts:
+
+1. [`README.md`](./prompts/README.md): Contains details about the prompts directory.
+2. [`terms.md`](./prompts/terms.md): Generates terms of service for a startup.
+3. [`onboarding-guide.md`](./prompts/onboarding-guide.md): Creates a user onboarding guide for a SaaS startup.
+4. [`faq.md`](./prompts/faq.md): Generates a detailed FAQ page for a SaaS startup.
+5. [`unit-test-case.md`](./prompts/unit-test-case.md): Creates a suite of automated test cases for a startup.
+6. [`api-documentation.md`](./prompts/api-documentation.md): Generates comprehensive API documentation for a startup.
+7. [`database-schema.md`](./prompts/database-schema.md): Creates a database schema for a startup.
+8. [`error-message-library.md`](./prompts/error-message-library.md): Generates a library of user-friendly error messages for a startup.
+9. [`privacy.md`](./prompts/privacy.md): Generates a comprehensive privacy policy for a SaaS startup.
+
+These prompts are designed to help individuals and teams quickly start a SaaS business. They provide a starting point and can be customized to suit your specific needs.
+
+## Getting Started
 
 ### Prerequisites
 

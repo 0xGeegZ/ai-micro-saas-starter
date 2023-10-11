@@ -59,8 +59,12 @@ pnpm run dev
 
 ## Available commands
 
-Running commands with pnpm `pnpm run [command]`
+Running commands with npm `npm run [command]`
 
-| command | description                              |
-| :------ | :--------------------------------------- |
-| `dev`   | Starts a development instance of the app |
+| command       | description                              |
+| :------------ | :--------------------------------------- |
+| `dev`         | Starts a development instance of the app |
+| `build`       | Builds the application for production    |
+| `start`       | Starts the production application        |
+| `lint`        | Lints the application code               |
+| `postinstall` | Generates Prisma client after install    |

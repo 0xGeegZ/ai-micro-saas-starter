@@ -17,19 +17,9 @@ import { Loader } from "@/components/loader"
 import { Empty } from "@/components/ui/empty"
 import { useProModal } from "@/lib/hooks/use-pro-modal"
 
-import { formSchema } from "./constants"
+import { formSchema, videoNavItems } from "./constants"
 import { SubNav } from "@/components/sub-nav"
 
-const nav = [
-  {
-    title: "Video",
-    href: "/dashboard/video",
-  },
-  {
-    title: "History",
-    href: "/dashboard/video/history",
-  },
-]
 const VideoPage = () => {
   const router = useRouter()
   const proModal = useProModal()
@@ -72,7 +62,7 @@ const VideoPage = () => {
         iconColor="text-orange-700"
         bgColor="bg-orange-700/10"
       />
-      <SubNav nav={nav} />
+      <SubNav nav={videoNavItems} />
       <div className="px-4 lg:px-8">
         <Form {...form}>
           <form

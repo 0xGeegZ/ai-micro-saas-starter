@@ -1,10 +1,8 @@
 "use client"
 import { MessageSquare } from "lucide-react"
-import { useRouter } from "next/navigation"
 
 import { Heading } from "@/components/heading"
 import { buttonVariants } from "@/components/ui/button"
-import { useProModal } from "@/lib/hooks/use-pro-modal"
 
 import { SubNav } from "@/components/sub-nav"
 import { EmptyPlaceholder } from "@/components/empty-placeholder"
@@ -13,10 +11,7 @@ import { Icons } from "@/components/icons"
 import { cn } from "@/lib/utils"
 import { conversationNavItems } from "../constants"
 
-const PhotoPage = () => {
-  const proModal = useProModal()
-  const router = useRouter()
-
+const ConversationHistoryPage = () => {
   return (
     <div>
       <Heading
@@ -53,4 +48,4 @@ const PhotoPage = () => {
   )
 }
 
-export default PhotoPage
+export default ConversationHistoryPage

@@ -34,7 +34,7 @@ import {
 } from "./constants"
 import { SubNav } from "@/components/sub-nav"
 
-const PhotoPage = () => {
+const ImageHistoryPage = () => {
   const proModal = useProModal()
   const router = useRouter()
   const [photos, setPhotos] = useState<string[]>([])
@@ -208,4 +208,4 @@ const PhotoPage = () => {
   )
 }
 
-export default PhotoPage
+export default ImageHistoryPage

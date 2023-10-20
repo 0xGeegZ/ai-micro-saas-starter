@@ -4,22 +4,22 @@ import Image from "next/image"
 import { Montserrat } from "next/font/google"
 import { usePathname } from "next/navigation"
 
-import { cn } from "@/lib/utils"
+import { cn, transformApplications } from "@/lib/utils"
 import { FreeCounter } from "@/components/free-counter"
 import { siteConfig } from "@/config/site"
 import { tools } from "@/config/application"
 import { Icons } from "./icons"
+import { useState, useEffect } from "react"
 
 const poppins = Montserrat({ weight: "600", subsets: ["latin"] })
 
-const routes = [
+const defaultRoutes = [
   {
     label: "Dashboard",
     icon: Icons.sparkles,
     href: "/dashboard",
     color: "text-white",
   },
-  ...tools,
   {
     label: "Settings",
     icon: Icons.settings,
@@ -29,13 +29,34 @@ const routes = [
 ]
 
 export const Sidebar = ({
+  applications,
   apiLimitCount = 0,
   isPro = false,
 }: {
+  applications: any
   apiLimitCount: number
   isPro: boolean
 }) => {
   const pathname = usePathname()
+
+  const [routes, setRoutes] = useState(defaultRoutes)
+
+  useEffect(() => {
+    const mergeAllFeatures = async () => {
+      const appRoutes = transformApplications(applications)
+      // Taking all default routes except the last one
+      const prevRoutesWithoutSettings = routes.slice(0, routes.length - 1)
+      setRoutes([
+        ...prevRoutesWithoutSettings,
+        ...appRoutes,
+        ...tools,
+        // adding last default route at the end
+        routes[routes.length - 1],
+      ])
+    }
+
+    mergeAllFeatures()
+  }, [])
 
   return (
     <div className="space-y-4 py-4 flex flex-col h-full bg-[#111827] text-white">

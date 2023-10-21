@@ -25,6 +25,11 @@ import {
   Twitter,
   User,
   X,
+  MessageSquare,
+  ImageIcon,
+  VideoIcon,
+  Music,
+  Code,
   type IconNode as LucideIcon,
 } from "lucide-react"
 import { SVGProps } from "react"
@@ -90,6 +95,11 @@ export const Icons = {
   sun: SunMedium,
   moon: Moon,
   laptop: Laptop,
+  messageSquare: MessageSquare,
+  imageIcon: ImageIcon,
+  videoIcon: VideoIcon,
+  music: Music,
+  code: Code,
   gitHub: (props: LucideProps) => (
     <svg viewBox="0 0 438.549 438.549" width="120" height="60" {...props}>
       <path

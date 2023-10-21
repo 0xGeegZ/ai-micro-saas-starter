@@ -2,7 +2,7 @@ import Stripe from "stripe"
 import { headers } from "next/headers"
 import { NextResponse } from "next/server"
 
-import prismadb from "@/lib/prismadb"
+import db from "@/lib/db"
 import { stripe } from "@/lib/stripe/stripe"
 
 export async function POST(req: Request) {
@@ -32,7 +32,7 @@ export async function POST(req: Request) {
       return new NextResponse("User id is required", { status: 400 })
     }
 
-    await prismadb.userSubscription.create({
+    await db.userSubscription.create({
       data: {
         userId: session?.metadata?.userId,
         stripeSubscriptionId: subscription.id,
@@ -50,7 +50,7 @@ export async function POST(req: Request) {
       session.subscription as string
     )
 
-    await prismadb.userSubscription.update({
+    await db.userSubscription.update({
       where: {
         stripeSubscriptionId: subscription.id,
       },

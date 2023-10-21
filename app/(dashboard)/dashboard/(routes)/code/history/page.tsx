@@ -1,9 +1,6 @@
 "use client"
-import { useRouter } from "next/navigation"
-
 import { Heading } from "@/components/heading"
 import { buttonVariants } from "@/components/ui/button"
-import { useProModal } from "@/lib/hooks/use-pro-modal"
 
 import { SubNav } from "@/components/sub-nav"
 import { EmptyPlaceholder } from "@/components/empty-placeholder"
@@ -13,10 +10,7 @@ import { cn } from "@/lib/utils"
 import { codeNavItems } from "../constants"
 import { Code } from "lucide-react"
 
-const PhotoPage = () => {
-  const proModal = useProModal()
-  const router = useRouter()
-
+const CodeHistoryPage = () => {
   return (
     <div>
       <Heading
@@ -50,4 +44,4 @@ const PhotoPage = () => {
   )
 }
 
-export default PhotoPage
+export default CodeHistoryPage

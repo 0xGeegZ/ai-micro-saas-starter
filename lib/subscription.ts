@@ -1,17 +1,16 @@
-import { auth } from "@clerk/nextjs";
+import { auth } from "@clerk/nextjs"
 
-import prismadb from "@/lib/prismadb";
-
-const DAY_IN_MS = 86_400_000;
+import db from "@/lib/db"
+import { DAY_IN_MS } from "@/config/constants"
 
 export const checkSubscription = async () => {
-  const { userId } = auth();
+  const { userId } = auth()
 
   if (!userId) {
-    return false;
+    return false
   }
 
-  const userSubscription = await prismadb.userSubscription.findUnique({
+  const userSubscription = await db.userSubscription.findUnique({
     where: {
       userId: userId,
     },
@@ -24,12 +23,12 @@ export const checkSubscription = async () => {
   })
 
   if (!userSubscription) {
-    return false;
+    return false
   }
 
   const isValid =
     userSubscription.stripePriceId &&
     userSubscription.stripeCurrentPeriodEnd?.getTime()! + DAY_IN_MS > Date.now()
 
-  return !!isValid;
-};
+  return !!isValid
+}

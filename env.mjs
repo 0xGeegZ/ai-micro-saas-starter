@@ -7,6 +7,7 @@ export const env = createEnv({
 
     CLERK_SECRET_KEY: z.string().min(1),
 
+    GENERATED_BY_API_KEY: z.string().optional(),
     OPENAI_API_KEY: z.string().optional(),
     REPLICATE_API_TOKEN: z.string().optional(),
 

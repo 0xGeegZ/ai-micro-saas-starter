@@ -8,3 +8,8 @@ export const SHIMMER_RADIAN_BACKGROUND =
 export const SHIMMER_BACKGROUND =
   "linear-gradient(to right, #7c3aed, #a78bfa, #ec4899)"
 export const SHIMMER_HOVER = "hover:shadow-[0_0_40px_8px_rgba(99,102,241,0.5)]"
+
+export const DAY_IN_MS = 86_400_000
+
+export const GENERATED_BY_ENDPOINT = "http://localhost:3000/api"
+// export const GENERATED_BY_ENDPOINT = "https://generatedby.com/api"

@@ -14,20 +14,13 @@ import { siteConfig } from "@/config/site"
 import { loadFullApplications } from "@/lib/applications"
 import { notFound } from "next/navigation"
 import { locales } from "@/i18n/locales"
+import { getMessages } from "next-intl/server"
 
 const font = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: siteConfig.name,
   description: siteConfig.description,
-}
-
-async function getMessages(locale: string) {
-  try {
-    return (await import(`../../i18n/messages/${locale}.json`)).default
-  } catch (error) {
-    notFound()
-  }
 }
 
 type RootLayoutProps = {
@@ -42,7 +35,7 @@ export default async function RootLayout({
   params: { locale },
 }: RootLayoutProps) {
   const messages = await getMessages(locale)
-  // Validate that the incoming `locale` parameter is valid
+
   const isValidLocale = locales.some((cur) => cur === locale)
   if (!isValidLocale) notFound()
 

@@ -1,4 +1,4 @@
-import { tools } from "@/config/application"
+import { tools } from "@/config/tools"
 import { Icons } from "@/components/icons"
 import ApplicationCard from "@/components/application-card"
 import { loadFullApplications } from "@/lib/applications"
@@ -19,6 +19,7 @@ export default async function HomePage() {
       <div className="px-4 md:px-20 lg:px-32 space-y-4">
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 place-items-center lg:gap-5 px-4 md:px-8">
           {applications.map((application) => {
+            const Icon = Icons[application.icon as keyof typeof Icons]
             return (
               <ApplicationCard
                 key={application.id}
@@ -26,8 +27,7 @@ export default async function HomePage() {
                   title: application.name,
                   description: application.description,
                   href: `/dashboard/applications/${application.id}`,
-                  icon: <Icons.add color="white" width={24} height={24} />,
-                  // icon: <IconFromUrl url={application.iconUrl} />,
+                  icon: <Icon color="white" width={24} height={24} />,
                   buttonText: "Launch",
                   loadingIcon: (
                     <Icons.spinner color="#0F172A" width={14} height={14} />
@@ -45,7 +45,7 @@ export default async function HomePage() {
             )
           })}
           {tools.map((tool) => {
-            const Icon = tool.icon
+            const Icon = Icons[tool.icon as keyof typeof Icons]
             return (
               <ApplicationCard
                 key={tool.href}

@@ -1,6 +1,5 @@
 import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
-import { Icons } from "../components/icons"
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -13,9 +12,12 @@ export function absoluteUrl(path: string) {
 export const transformApplications = (applications: any[]) => {
   return applications.map((application: any) => ({
     label: application.name,
-    icon: Icons.add,
+    icon: application?.icon ?? "LayoutGrid",
+    //  icon: application?.icon
+    //   ? Icon[application.icon as keyof typeof Icon]
+    //   : Icon.LayoutGrid,
     href: `/dashboard/applications/${application.id}`,
-    color: "", // TODO
-    bgColor: "defaultColor", // Add this line
+    color: application?.color ?? "text-green-700",
+    bgColor: application?.bgColor ?? "bg-green-700/10",
   }))
 }

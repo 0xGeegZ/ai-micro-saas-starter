@@ -20,19 +20,18 @@ const ApplicationPage = async ({ params }: ApplicationPageProps) => {
 
   const iframeSrc = `${GENERATED_BY_ENDPOINT}/iframe/applications/${application.slug}`
 
+  const Icon = Icons[application.icon as keyof typeof Icons]
+
   return (
     <div className="h-full">
       <Heading
         title={application.name}
         description={application.description}
-        icon={Icons.add}
-        iconColor="text-violet-500"
-        bgColor="bg-violet-500/10"
+        icon={Icon}
+        iconColor={application.color}
+        bgColor={application.bgColor}
       />
       <ApplicationSubNav nav={applicationNavItems} />
-      {/* <iframe src={iframeSrc} width="100%" height="100%">
-        <p>Your browser does not support iframes.</p>
-      </iframe> */}
       <Iframe
         url={iframeSrc}
         width="100%"

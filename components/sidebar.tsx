@@ -7,24 +7,24 @@ import { usePathname } from "next/navigation"
 import { cn, transformApplications } from "@/lib/utils"
 import { FreeCounter } from "@/components/free-counter"
 import { siteConfig } from "@/config/site"
-import { tools } from "@/config/application"
+import { tools } from "@/config/tools"
 import { Icons } from "./icons"
 import { useState, useEffect } from "react"
+import { Tool } from "@/types/tool"
 
 const poppins = Montserrat({ weight: "600", subsets: ["latin"] })
 
-const defaultRoutes = [
+const defaultRoutes: Tool[] = [
   {
     label: "Dashboard",
-    icon: Icons.sparkles,
+    icon: "sparkles",
     href: "/dashboard",
     color: "text-white",
   },
   {
     label: "Settings",
-    icon: Icons.settings,
+    icon: "settings",
     href: "/dashboard/settings",
-    color: "",
   },
 ]
 
@@ -70,23 +70,26 @@ export const Sidebar = ({
           </h1>
         </Link>
         <div className="space-y-1">
-          {routes.map((route) => (
-            <Link
-              key={route.href}
-              href={route.href}
-              className={cn(
-                "text-sm group flex p-3 w-full justify-start font-medium cursor-pointer hover:text-white hover:bg-white/10 rounded-lg transition",
-                pathname === route.href
-                  ? "text-white bg-white/10"
-                  : "text-muted-foreground"
-              )}
-            >
-              <div className="flex items-center flex-1">
-                <route.icon className={cn("h-5 w-5 mr-3", route?.color)} />
-                {route.label}
-              </div>
-            </Link>
-          ))}
+          {routes.map((route) => {
+            const Icon = Icons[route.icon as keyof typeof Icons]
+            return (
+              <Link
+                key={route.href}
+                href={route.href}
+                className={cn(
+                  "text-sm group flex p-3 w-full justify-start font-medium cursor-pointer hover:text-white hover:bg-white/10 rounded-lg transition",
+                  pathname === route.href
+                    ? "text-white bg-white/10"
+                    : "text-muted-foreground"
+                )}
+              >
+                <div className="flex items-center flex-1">
+                  <Icon className={cn("h-5 w-5 mr-3", route?.color)} />
+                  {route.label}
+                </div>
+              </Link>
+            )
+          })}
         </div>
       </div>
       <FreeCounter apiLimitCount={apiLimitCount} isPro={isPro} />

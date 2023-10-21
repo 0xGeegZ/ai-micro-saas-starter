@@ -5,6 +5,7 @@ import { getApiLimitCount } from "@/lib/api-limit"
 import { checkSubscription } from "@/lib/subscription"
 import { ThemeToggle } from "./theme-toggle"
 import { loadFullApplications } from "@/lib/applications"
+import { LanguageSwitcher } from "./language-switcher"
 
 const Navbar = async () => {
   const apiLimitCount = await getApiLimitCount()
@@ -19,6 +20,7 @@ const Navbar = async () => {
         apiLimitCount={apiLimitCount}
       />
       <div className="flex w-full justify-end gap-x-2">
+        <LanguageSwitcher />
         <ThemeToggle />
         <UserButton afterSignOutUrl="/" />
       </div>

@@ -56,7 +56,7 @@ export default async function HomePage() {
                   href: tool.href,
                   // icon: <Icon className={tool.color} width={24} height={24} />,
                   icon: <Icon color="white" width={24} height={24} />,
-                  buttonText: "Launch",
+                  buttonText: "Generate",
                   loadingIcon: (
                     <Icons.spinner color="#0F172A" width={14} height={14} />
                   ),

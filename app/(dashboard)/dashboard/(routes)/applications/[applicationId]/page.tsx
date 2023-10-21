@@ -4,8 +4,8 @@ import { Icons } from "@/components/icons"
 import { GENERATED_BY_ENDPOINT } from "@/config/constants"
 import { loadFullApplication } from "@/lib/applications"
 import { notFound } from "next/navigation"
-import Iframe from "react-iframe"
 import { applicationNavItems } from "../constants"
+import ApplicationIframe from "@/components/application-iframe"
 
 interface ApplicationPageProps {
   params: { applicationId: string }
@@ -32,14 +32,7 @@ const ApplicationPage = async ({ params }: ApplicationPageProps) => {
         bgColor={application.bgColor}
       />
       <ApplicationSubNav nav={applicationNavItems} />
-      <Iframe
-        url={iframeSrc}
-        width="100%"
-        height="100%"
-        className="h-full w-full"
-        display="block"
-        position="relative"
-      />
+      <ApplicationIframe url={iframeSrc} />
     </div>
   )
 }

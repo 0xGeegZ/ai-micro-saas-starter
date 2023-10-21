@@ -11,6 +11,7 @@ import { ThemeToggle } from "../theme-toggle"
 import { siteConfig } from "@/config/site"
 import { LanguageSwitcher } from "../language-switcher"
 
+
 const font = Montserrat({ weight: "600", subsets: ["latin"] })
 
 export const LandingNavbar = () => {

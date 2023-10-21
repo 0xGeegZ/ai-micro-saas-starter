@@ -1,7 +1,7 @@
 import { Zap } from "lucide-react"
 import { useEffect, useState } from "react"
 
-import { MAX_FREE_COUNTS } from "@/config/application"
+import { MAX_FREE_COUNTS } from "@/config/tools"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Progress } from "@/components/ui/progress"

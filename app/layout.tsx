@@ -11,6 +11,7 @@ import { ThemeProvider } from "@/components/providers/theme-provider"
 import MotionProvider from "@/components/providers/motion-provider"
 import { cn } from "@/lib/utils"
 import { siteConfig } from "@/config/site"
+import { loadFullApplications } from "@/lib/applications"
 
 const font = Inter({ subsets: ["latin"] })
 
@@ -24,6 +25,8 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const applications = await loadFullApplications()
+
   return (
     <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
@@ -37,7 +40,7 @@ export default async function RootLayout({
                 // "relative flex min-h-screen w-full flex-col justify-center scroll-smooth bg-background font-sans antialiased"
               )}
             >
-              <ModalProvider />
+              <ModalProvider applications={applications} />
               {children}
               <Toaster />
             </body>

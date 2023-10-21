@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "../theme-toggle"
 import { siteConfig } from "@/config/site"
+import { LanguageSwitcher } from "../language-switcher"
 
 const font = Montserrat({ weight: "600", subsets: ["latin"] })
 
@@ -26,6 +27,7 @@ export const LandingNavbar = () => {
         </h1>
       </Link>
       <div className="flex items-center gap-x-2">
+        <LanguageSwitcher />
         <ThemeToggle />
         <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
           <Button variant="default" className="rounded-full">

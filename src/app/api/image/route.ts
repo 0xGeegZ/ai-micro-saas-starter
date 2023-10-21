@@ -47,6 +47,7 @@ export async function POST(req: Request) {
       )
     }
 
+    // TODO use stable diffusion XL model
     const response = await openai.createImage({
       prompt,
       n: parseInt(amount, 10),

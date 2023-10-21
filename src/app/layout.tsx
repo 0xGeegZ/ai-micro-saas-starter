@@ -1,52 +1,12 @@
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import { ClerkProvider } from "@clerk/nextjs"
-
-import { ModalProvider } from "@/components/providers/modal-provider"
-import { CrispProvider } from "@/components/providers/crisp-provider"
-
+import { ReactNode } from "react"
 import "../styles/globals.css"
-import { Toaster } from "@/components/ui/toaster"
-import { ThemeProvider } from "@/components/providers/theme-provider"
-import MotionProvider from "@/components/providers/motion-provider"
-import { cn } from "@/lib/utils"
-import { siteConfig } from "@/config/site"
-import { loadFullApplications } from "@/lib/applications"
 
-const font = Inter({ subsets: ["latin"] })
-
-export const metadata: Metadata = {
-  title: siteConfig.name,
-  description: siteConfig.description,
+type Props = {
+  children: ReactNode
 }
 
-export default async function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  const applications = await loadFullApplications()
-
-  return (
-    <ClerkProvider>
-      <html lang="en" suppressHydrationWarning>
-        <MotionProvider>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <CrispProvider />
-            <body
-              className={cn(
-                font.className,
-                "scroll-smooth font-sans antialiased"
-                // "relative flex min-h-screen w-full flex-col justify-center scroll-smooth bg-background font-sans antialiased"
-              )}
-            >
-              <ModalProvider applications={applications} />
-              {children}
-              <Toaster />
-            </body>
-          </ThemeProvider>
-        </MotionProvider>
-      </html>
-    </ClerkProvider>
-  )
+// Since we have a `not-found.tsx` page on the root, a layout file
+// is required, even if it's just passing children through.
+export default function RootLayout({ children }: Props) {
+  return children
 }

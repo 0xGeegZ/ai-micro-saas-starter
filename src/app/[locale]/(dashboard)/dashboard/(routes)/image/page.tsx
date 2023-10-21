@@ -56,9 +56,10 @@ const ImageHistoryPage = () => {
 
       const response = await axios.post("/api/image", values)
 
-      const urls = response.data.map((image: { url: string }) => image.url)
+      // const urls = response.data.map((image: { url: string }) => image.url)
 
-      setPhotos(urls)
+      // setPhotos(urls)
+      setPhotos(response.data)
     } catch (error: any) {
       if (error?.response?.status === 403) {
         proModal.onOpen()

@@ -1,6 +1,6 @@
 import { Tool } from "@/types/tool"
 
-export const MAX_FREE_COUNTS = 5
+export const MAX_FREE_COUNTS = 10
 
 // Add you own applications here
 export const applications = [

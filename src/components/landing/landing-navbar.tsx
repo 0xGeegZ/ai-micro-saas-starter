@@ -2,7 +2,7 @@
 
 import { Montserrat } from "next/font/google"
 import Image from "next/image"
-import Link from "next/link"
+import Link from "next-intl/link"
 import { useAuth } from "@clerk/nextjs"
 
 import { cn } from "@/lib/utils"
@@ -10,7 +10,6 @@ import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "../theme-toggle"
 import { siteConfig } from "@/config/site"
 import { LanguageSwitcher } from "../language-switcher"
-
 
 const font = Montserrat({ weight: "600", subsets: ["latin"] })
 

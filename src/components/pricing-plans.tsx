@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 // import { useUser } from "@/lib/hooks/user/useUser"
 import { subscriptionPlans } from "@/lib/stripe/subscriptionPlans"
 import { cn } from "@/lib/utils"
-import { useRouter } from "next/navigation"
+import { useRouter } from "@/i18n/navigation"
 import { Suspense, useState } from "react"
 import { Icons } from "./icons"
 

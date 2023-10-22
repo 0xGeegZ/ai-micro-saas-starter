@@ -4,7 +4,7 @@ import BackedBy from "@/components/landing/partners/backed-by"
 import ShimmerButton from "@/components/magicui/shimmer-button"
 import { m } from "framer-motion"
 import { ChevronRight } from "lucide-react"
-import { useRouter } from "next/navigation"
+import { useRouter } from "@/i18n/navigation"
 import { Suspense } from "react"
 
 const HeroSecondary = () => {

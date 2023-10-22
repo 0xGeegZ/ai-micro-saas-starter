@@ -1,8 +1,8 @@
 "use client"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import Image from "next/image"
 import { Montserrat } from "next/font/google"
-import { usePathname } from "next/navigation"
+import { usePathname } from "@/i18n/navigation"
 
 import { cn, transformApplications } from "@/lib/utils"
 import { FreeCounter } from "@/components/free-counter"

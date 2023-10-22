@@ -1,7 +1,7 @@
 "use client"
 
-import Link from "next/link"
-import { useParams, usePathname } from "next/navigation"
+import { Link, usePathname } from "@/i18n/navigation"
+import { useParams } from "next/navigation"
 
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 import { cn } from "@/lib/utils"

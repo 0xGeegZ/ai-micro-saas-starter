@@ -1,6 +1,5 @@
 import { siteConfig } from "@/config/site"
-import Link from "next/link"
-
+import { Link } from "@/i18n/navigation"
 const Terms = () => {
   return (
     <div className="prose container flex flex-col justify-center max-w-10xl pb-16 px-8">

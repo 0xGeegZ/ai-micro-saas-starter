@@ -1,7 +1,7 @@
 import { Icons } from "@/components/icons"
 import { siteConfig } from "@/config/site"
 import { DiscordLogoIcon } from "@radix-ui/react-icons"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import Image from "next/image"
 
 const footerNavs = [

@@ -1,7 +1,6 @@
 import { Icons } from "@/components/icons"
 import { siteConfig } from "@/config/site"
-import Link from "next/link"
-
+import { Link } from "@/i18n/navigation"
 const TestimonialHighlight = () => {
   return (
     <>

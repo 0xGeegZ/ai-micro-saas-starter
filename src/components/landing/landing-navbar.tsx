@@ -10,11 +10,15 @@ import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "../theme-toggle"
 import { siteConfig } from "@/config/site"
 import { LanguageSwitcher } from "../language-switcher"
+import { defaultLocale } from "@/i18n/locales"
+import { env } from "@/env"
+import { useLocale } from "next-intl"
 
 const font = Montserrat({ weight: "600", subsets: ["latin"] })
 
 export const LandingNavbar = () => {
   const { isSignedIn } = useAuth()
+  const locale = useLocale()
 
   return (
     <nav className="p-4 bg-transparent flex items-center justify-between">
@@ -29,7 +33,13 @@ export const LandingNavbar = () => {
       <div className="flex items-center gap-x-2">
         <LanguageSwitcher />
         <ThemeToggle />
-        <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
+        <Link
+          href={`${locale !== defaultLocale && locale}${
+            isSignedIn
+              ? env.NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL_PATH
+              : env.NEXT_PUBLIC_CLERK_SIGN_UP_URL_PATH
+          }`}
+        >
           <Button variant="default" className="rounded-full">
             {isSignedIn ? "Dashboard" : "Get Started"}
           </Button>

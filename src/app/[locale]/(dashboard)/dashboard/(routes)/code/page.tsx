@@ -7,7 +7,6 @@ import { useForm } from "react-hook-form"
 import { useState } from "react"
 import { toast } from "react-hot-toast"
 import ReactMarkdown from "react-markdown"
-import { useRouter } from "next/navigation"
 import { ChatCompletionRequestMessage } from "openai"
 
 import { BotAvatar } from "@/components/bot-avatar"
@@ -21,9 +20,9 @@ import { Loader } from "@/components/loader"
 import { UserAvatar } from "@/components/user-avatar"
 import { Empty } from "@/components/ui/empty"
 import { useProModal } from "@/lib/hooks/use-pro-modal"
-
 import { codeNavItems, formSchema } from "./constants"
 import { SubNav } from "@/components/sub-nav"
+import { useRouter } from "next/navigation"
 
 const CodePage = () => {
   const router = useRouter()

@@ -7,7 +7,7 @@ import { notFound } from "next/navigation"
 import { EmptyPlaceholder } from "@/components/empty-placeholder"
 import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
-import Link from "next/link"
+import Link from "next-intl/link"
 
 interface ApplicationHistoryPageProps {
   params: { applicationId: string }

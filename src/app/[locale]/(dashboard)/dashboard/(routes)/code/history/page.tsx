@@ -4,7 +4,7 @@ import { buttonVariants } from "@/components/ui/button"
 
 import { SubNav } from "@/components/sub-nav"
 import { EmptyPlaceholder } from "@/components/empty-placeholder"
-import Link from "next/link"
+import Link from "next-intl/link"
 import { Icons } from "@/components/icons"
 import { cn } from "@/lib/utils"
 import { codeNavItems } from "../constants"

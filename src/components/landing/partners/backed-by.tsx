@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from "next-intl/link"
 
 const BackedBy = () => (
   <div className="mt-12 flex flex-col gap-4 justify-center items-center">

@@ -4,7 +4,17 @@ import { checkSubscription } from "@/lib/subscription"
 import { getApiLimitCount } from "@/lib/api-limit"
 import { loadFullApplications } from "@/lib/applications"
 
-const DashboardLayout = async ({ children }: { children: React.ReactNode }) => {
+type DashboardLayoutProps = {
+  children: React.ReactNode
+  params: {
+    locale: string
+  }
+}
+
+const DashboardLayout = async ({
+  children,
+  params: { locale },
+}: DashboardLayoutProps) => {
   const apiLimitCount = await getApiLimitCount()
   const isPro = await checkSubscription()
   const applications = await loadFullApplications()
@@ -19,7 +29,7 @@ const DashboardLayout = async ({ children }: { children: React.ReactNode }) => {
         />
       </div>
       <main className="md:pl-72 pb-10 h-full">
-        <Navbar />
+        <Navbar locale={locale} />
         {children}
       </main>
     </div>

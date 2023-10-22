@@ -26,9 +26,11 @@ const Navbar = async ({ locale }: NavbarProps) => {
       <div className="flex w-full justify-end gap-x-2">
         <LanguageSwitcher />
         <ThemeToggle />
-        <UserButton
-          afterSignOutUrl={`/${locale !== defaultLocale ? locale : ""}`}
-        />
+        <div className="my-auto">
+          <UserButton
+            afterSignOutUrl={`/${locale !== defaultLocale ? locale : ""}`}
+          />
+        </div>
       </div>
     </div>
   )

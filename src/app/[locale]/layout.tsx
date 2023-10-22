@@ -44,24 +44,24 @@ export default async function RootLayout({
   return (
     <ClerkProvider>
       <html lang={locale} suppressHydrationWarning>
-        <MotionProvider>
+        <body
+          className={cn(
+            font.className,
+            "scroll-smooth font-sans antialiased"
+            // "relative flex min-h-screen w-full flex-col justify-center scroll-smooth bg-background font-sans antialiased"
+          )}
+        >
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <CrispProvider />
-            <body
-              className={cn(
-                font.className,
-                "scroll-smooth font-sans antialiased"
-                // "relative flex min-h-screen w-full flex-col justify-center scroll-smooth bg-background font-sans antialiased"
-              )}
-            >
+            <MotionProvider>
               <NextIntlClientProvider locale={locale} messages={messages}>
                 <ModalProvider applications={applications} />
                 {children}
                 <Toaster />
               </NextIntlClientProvider>
-            </body>
+            </MotionProvider>
           </ThemeProvider>
-        </MotionProvider>
+        </body>
+        <CrispProvider />
       </html>
     </ClerkProvider>
   )

@@ -58,11 +58,11 @@ export default function CardShell({ card, isLoading, func }: CardShellProps) {
           <CardTitle className="mb-1 text-left font-semibold text-base dark:text-black">
             {card.title}
           </CardTitle>
-          <CardDescription className="text-left">
-            <ScrollArea className="h-[35px] xl:h-[70px]">
+          <ScrollArea className="h-[70px] sm:h-[35px] xl:h-[70px]">
+            <CardDescription className="text-left">
               {card.description}
-            </ScrollArea>
-          </CardDescription>
+            </CardDescription>
+          </ScrollArea>
         </CardContent>
       </div>
     </Card>

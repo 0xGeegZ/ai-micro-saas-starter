@@ -88,7 +88,7 @@ const HeroSecondary = () => {
                 className="flex items-center justify-center shadow-2xl transition-all hover:shadow-[0_0_40px_8px_rgba(185,28,28,0.5)]"
                 background="radial-gradient(ellipse 80% 70% at 50% 120%, #f59e0b, #B91C1C)"
                 onClick={() => {
-                  router.push("/login")
+                  router.push("/sign-up")
                 }}
               >
                 <span className="whitespace-pre bg-gradient-to-b from-black from-30% to-gray-300/80 bg-clip-text text-center text-sm lg:text-2xl font-semibold leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 dark:text-transparent z-10">

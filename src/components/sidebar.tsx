@@ -1,5 +1,5 @@
 "use client"
-import Link from "next/link"
+import Link from "next-intl/link"
 import Image from "next/image"
 import { Montserrat } from "next/font/google"
 import { usePathname } from "next/navigation"

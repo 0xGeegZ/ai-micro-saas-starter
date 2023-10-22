@@ -10,6 +10,7 @@ Features:
 
 - AI prompts folders to generate main project pages (Terms, FAQ, Privacy Policy, About, Documentation, etc.)
 - Folder structure in [Next 13 App Router](https://nextjs.org/docs/app)
+- [Next Intl](https://next-intl-docs.vercel.app/) for Internationalization (compatible with App Router Server 1 Client components)
 - [Shadcn](https://ui.shadcn.com/) UI on top of Radix UI
 - [Tailwind](https://tailwindcss.com/docs/installation) & [Framer Motion](https://www.framer.com/motion/) animations and effects
 - [Clerk Authentication](https://clerk.com/docs) (Email, Google, 9+ Social Logins)
@@ -45,7 +46,7 @@ These prompts are designed to help individuals and teams quickly start a SaaS bu
 
 ### Prerequisites
 
-**Node version 18.x.x**
+**Node version 20.x.x**
 
 ### Cloning the repository
 
@@ -91,3 +92,11 @@ Running commands with npm `npm run [command]`
 | `start`       | Starts the production application        |
 | `lint`        | Lints the application code               |
 | `postinstall` | Generates Prisma client after install    |
+
+## Internationalization
+
+This project has been fully set up for internationalization, using [Next Intl](https://next-intl-docs.vercel.app/). However, the pages and components have not been translated yet. This means that while the infrastructure for supporting multiple languages is in place, the actual content in different languages is not available.
+
+If you would like to contribute to this project, we have created an issue for translating the pages and components. Any help in this regard would be greatly appreciated. You can find the issue on our GitHub repository and contribute by providing translations for the various strings used throughout the application.
+
+Please note that while contributing, you should follow the guidelines provided in the issue to ensure consistency and quality in translations. Thank you in advance for your contributions!

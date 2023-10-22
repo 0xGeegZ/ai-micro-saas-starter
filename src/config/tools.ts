@@ -1,7 +1,5 @@
 import { Tool } from "@/types/tool"
 
-export const MAX_FREE_COUNTS = 5
-
 // Add you own applications here
 export const applications = [
   {
@@ -35,13 +33,13 @@ export const tools: Tool[] = [
     bgColor: "bg-pink-700/10",
     href: "/dashboard/image",
   },
-  {
-    label: "Video Generation",
-    icon: "videoIcon",
-    color: "text-orange-700",
-    bgColor: "bg-orange-700/10",
-    href: "/dashboard/video",
-  },
+  // {
+  //   label: "Video Generation",
+  //   icon: "videoIcon",
+  //   color: "text-orange-700",
+  //   bgColor: "bg-orange-700/10",
+  //   href: "/dashboard/video",
+  // },
   // {
   //   label: "Code Generation",
   //   icon: "code",

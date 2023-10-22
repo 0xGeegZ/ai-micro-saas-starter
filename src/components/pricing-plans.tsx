@@ -172,7 +172,7 @@ const Pricing = () => {
 
   const handleCheckout = (plan: Name) => {
     // if (!user) {
-    //   router.push("/login")
+    //   router.push("/sign-up")
     //   return
     // }
 

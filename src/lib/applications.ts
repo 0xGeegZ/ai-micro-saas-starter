@@ -1,12 +1,15 @@
 import { applications } from "@/config/tools"
 import { GENERATED_BY_ENDPOINT } from "@/config/constants"
 import { fetcher } from "./fetcher"
+
+import { env } from "@/env"
+
 const fetchApplicationData = async (applicationId: string) => {
   return await fetcher(
     `${GENERATED_BY_ENDPOINT}/applications/${applicationId}`,
     {
       headers: {
-        Authorization: `Bearer ${process.env.GENERATED_BY_API_KEY}`,
+        Authorization: `Bearer ${env.GENERATED_BY_API_KEY}`,
       },
     }
   )

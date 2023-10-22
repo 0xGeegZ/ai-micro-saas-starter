@@ -5,7 +5,7 @@ import { buttonVariants } from "@/components/ui/button"
 import { MAIN_COLOR } from "@/config/constants"
 import { cn } from "@/lib/utils"
 import { List } from "lucide-react"
-import Link from "next/link"
+import Link from "next-intl/link"
 
 const features = [
   {
@@ -18,7 +18,7 @@ const features = [
     video:
       "https://static.videezy.com/system/resources/previews/000/022/066/original/4k-dynamic-preloader-with-dots-animation.mp4",
     cta: "Get Started",
-    href: "/login",
+    href: "/sign-up",
     reverse: false,
   },
   {
@@ -31,7 +31,7 @@ const features = [
     video:
       "https://static.videezy.com/system/resources/previews/000/022/066/original/4k-dynamic-preloader-with-dots-animation.mp4",
     cta: "Get Started",
-    href: "/login",
+    href: "/sign-up",
     reverse: true,
   },
   {
@@ -44,7 +44,7 @@ const features = [
     video:
       "https://static.videezy.com/system/resources/previews/000/022/066/original/4k-dynamic-preloader-with-dots-animation.mp4",
     cta: "Get Started",
-    href: "/login",
+    href: "/sign-up",
     reverse: false,
   },
 ]

@@ -1,7 +1,7 @@
 import { Icons } from "@/components/icons"
 import { siteConfig } from "@/config/site"
 import { DiscordLogoIcon } from "@radix-ui/react-icons"
-import Link from "next/link"
+import Link from "next-intl/link"
 import Image from "next/image"
 
 const footerNavs = [
@@ -129,6 +129,7 @@ export function SiteFooter() {
               <Link
                 key={social.name}
                 href={social.href}
+                target="_blank"
                 className="text-muted-foreground hover:text-foreground dark:hover:text-muted-foreground"
               >
                 {social.icon}
@@ -137,9 +138,10 @@ export function SiteFooter() {
             ))}
           </div>
           <span className="text-sm text-muted-foreground sm:text-center dark:text-gray-400">
-            © {currentYear}{" "}
+            © {currentYear}
+            {" - "}
             <Link href="/" className="cursor-pointer">
-              ${siteConfig.name}
+              {siteConfig.name}
             </Link>
             . All Rights Reserved.
           </span>

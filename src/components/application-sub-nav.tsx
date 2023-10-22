@@ -1,6 +1,6 @@
 "use client"
 
-import Link from "next/link"
+import Link from "next-intl/link"
 import { useParams, usePathname } from "next/navigation"
 
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"

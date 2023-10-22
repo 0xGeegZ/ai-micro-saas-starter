@@ -3,7 +3,7 @@ import { badgeVariants } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { siteConfig } from "@/config/site"
 import Image from "next/image"
-import Link from "next/link"
+import Link from "next-intl/link"
 
 export const HeroAlt = () => {
   return (

@@ -18,15 +18,15 @@ export const Hero = () => {
   return (
     <div className="text-primary font-bold py-36 text-center space-y-5">
       <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl space-y-5 font-extrabold">
-        <h1>The Best AI Tool for</h1>
+        <h1>AI-Driven Micro-SaaS for</h1>
         <div className={cn("text-transparent bg-clip-text", RADIAN_BACKGROUND)}>
           <TypewriterComponent
             options={{
               strings: [
-                "Chatbot.",
-                "Photo Generation.",
-                "Blog Writing.",
-                "Mail Writing.",
+                "Social Media Marketing.",
+                "Content Writing.",
+                "Recruitment & HR.",
+                "Product Management.",
               ],
               autoStart: true,
               loop: true,
@@ -35,7 +35,7 @@ export const Hero = () => {
         </div>
       </div>
       <div className="text-sm md:text-xl font-light text-muted-foreground">
-        Create content using AI 10x faster.
+        Work 10x faster with your personal AI assistants.
       </div>
       <div className="grid md:grid-cols-1 place-items-center">
         <ShimmerButton

@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from "next-intl/link"
 import { Button } from "../ui/button"
 import { Icons } from "../icons"
 import { siteConfig } from "@/config/site"

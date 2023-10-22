@@ -10,14 +10,14 @@ export default async function HomePage() {
     <div>
       <div className="mb-8 space-y-4">
         <h2 className="text-2xl md:text-4xl font-bold text-center">
-          Explore the power of AI
+          AI-Driven Micro-SaaS
         </h2>
         <p className="text-muted-foreground font-light text-sm md:text-lg text-center">
-          Chat with the smartest AI - Experience the power of AI
+          Work 10x faster with your personal AI assistants.
         </p>
       </div>
       <div className="px-4 md:px-20 lg:px-32 space-y-4">
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 place-items-center lg:gap-5 px-4 md:px-8">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3 place-items-center lg:gap-5 px-4 md:px-8">
           {applications.map((application) => {
             const Icon = Icons[application.icon as keyof typeof Icons]
             return (

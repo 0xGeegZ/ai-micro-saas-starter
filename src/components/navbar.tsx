@@ -7,7 +7,10 @@ import { ThemeToggle } from "./theme-toggle"
 import { loadFullApplications } from "@/lib/applications"
 import { LanguageSwitcher } from "./language-switcher"
 
-const Navbar = async () => {
+type NavbarProps = {
+  locale: string
+}
+const Navbar = async ({ locale }: NavbarProps) => {
   const apiLimitCount = await getApiLimitCount()
   const isPro = await checkSubscription()
   const applications = await loadFullApplications()
@@ -22,7 +25,9 @@ const Navbar = async () => {
       <div className="flex w-full justify-end gap-x-2">
         <LanguageSwitcher />
         <ThemeToggle />
-        <UserButton afterSignOutUrl="/" />
+        <div className="my-auto">
+          <UserButton afterSignOutUrl={`/${locale}`} />
+        </div>
       </div>
     </div>
   )

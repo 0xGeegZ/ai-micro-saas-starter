@@ -40,7 +40,6 @@ export function LanguageSwitcher() {
         {filteredLocales?.map((currentLocale, index) => (
           <Fragment key={index}>
             <Link
-              // href={`/${currentLocale}`}
               href="/"
               // TODO error on sub layout language switch (example from dashboard)
               // href={pathname?.replace(`/${locale}`, "") ?? "/"}

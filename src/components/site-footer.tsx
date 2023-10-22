@@ -129,6 +129,7 @@ export function SiteFooter() {
               <Link
                 key={social.name}
                 href={social.href}
+                target="_blank"
                 className="text-muted-foreground hover:text-foreground dark:hover:text-muted-foreground"
               >
                 {social.icon}

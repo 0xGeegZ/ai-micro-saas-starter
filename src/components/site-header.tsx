@@ -8,7 +8,7 @@
 // import { cn } from "@/lib/utils";
 // import { StarIcon } from "@heroicons/react/24/solid";
 // import { User } from "next-auth";
-// import Link from "next/link";
+// import Link from "next-intl/link";
 
 // interface SiteHeaderProps {
 //   user?: User;
@@ -109,7 +109,7 @@
 
 //             {!user && (
 //               <Link
-//                 href="/login"
+//                 href="/sign-up"
 //                 className={cn(
 //                   buttonVariants({ variant: "secondary", size: "lg" }),
 //                   "px-4 bg-gradient-to-r from-red-600 to-amber-600 text-white"

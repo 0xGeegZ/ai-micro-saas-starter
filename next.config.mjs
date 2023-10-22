@@ -22,6 +22,8 @@ const nextConfig = {
   }),
   images: {
     domains: [
+      "images.clerk.com",
+      "www.gravatar.com",
       "googleusercontent.com",
       "pbxt.replicate.delivery",
       "oaidalleapiprodscus.blob.core.windows.net",

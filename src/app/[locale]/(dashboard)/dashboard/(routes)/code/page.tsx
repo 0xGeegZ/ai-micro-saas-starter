@@ -20,7 +20,6 @@ import { Loader } from "@/components/loader"
 import { UserAvatar } from "@/components/user-avatar"
 import { Empty } from "@/components/ui/empty"
 import { useProModal } from "@/lib/hooks/use-pro-modal"
-
 import { codeNavItems, formSchema } from "./constants"
 import { SubNav } from "@/components/sub-nav"
 import { useRouter } from "@/i18n/navigation"

@@ -1,8 +1,8 @@
 // APP SETTINGS CONSTANTS
-export const MAX_FREE_COUNTS = 20
+export const MAX_FREE_COUNTS = 5
 
-export const GENERATED_BY_ENDPOINT = "http://localhost:3000/api"
-// export const GENERATED_BY_ENDPOINT = "https://generatedby.com/api"
+// export const GENERATED_BY_ENDPOINT = "http://localhost:3000/api"
+export const GENERATED_BY_ENDPOINT = "https://generatedby.com/api"
 
 // SITE COLORS CONSTANTS
 export const MAIN_COLOR = "text-purple-600"

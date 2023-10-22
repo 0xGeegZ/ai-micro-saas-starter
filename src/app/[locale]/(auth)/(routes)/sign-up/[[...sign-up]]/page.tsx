@@ -1,5 +1,8 @@
-import { SignUp } from "@clerk/nextjs";
+import { SignUp } from "@clerk/nextjs"
+import { useLocale } from "next-intl"
 
 export default function Page() {
-  return <SignUp />;
-};
+  const locale = useLocale()
+
+  return <SignUp redirectUrl={`${locale}/dashboard`} />
+}

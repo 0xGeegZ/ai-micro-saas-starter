@@ -1,7 +1,6 @@
 import { authMiddleware, redirectToSignIn } from "@clerk/nextjs"
 import createMiddleware from "next-intl/middleware"
 import { defaultLocale, locales } from "./i18n/locales"
-import { env } from "@/env"
 
 const intlMiddleware = createMiddleware({
   locales,
@@ -19,10 +18,10 @@ export default authMiddleware({
     ...locales
       .filter((locale) => locale !== defaultLocale)
       .map((locale) => `/${locale}`),
-    `${env.NEXT_PUBLIC_CLERK_SIGN_IN_URL_PATH}`,
-    `${env.NEXT_PUBLIC_CLERK_SIGN_UP_URL_PATH}`,
-    `/:locale${env.NEXT_PUBLIC_CLERK_SIGN_IN_URL_PATH}`,
-    `/:locale${env.NEXT_PUBLIC_CLERK_SIGN_UP_URL_PATH}`,
+    `/sign-in`,
+    `/sign-up`,
+    `/:locale/sign-in`,
+    `/:locale/sign-up`,
   ],
   afterAuth: (auth, req, evt) => {
     // handle users who aren't authenticated

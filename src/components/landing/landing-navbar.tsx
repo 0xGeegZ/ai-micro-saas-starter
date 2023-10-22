@@ -1,5 +1,4 @@
 "use client"
-
 import { Montserrat } from "next/font/google"
 import Image from "next/image"
 import Link from "next-intl/link"
@@ -11,7 +10,6 @@ import { ThemeToggle } from "../theme-toggle"
 import { siteConfig } from "@/config/site"
 import { LanguageSwitcher } from "../language-switcher"
 import { defaultLocale } from "@/i18n/locales"
-import { env } from "@/env"
 import { useLocale } from "next-intl"
 
 const font = Montserrat({ weight: "600", subsets: ["latin"] })
@@ -35,9 +33,7 @@ export const LandingNavbar = () => {
         <ThemeToggle />
         <Link
           href={`${locale !== defaultLocale ? locale : ""}${
-            isSignedIn
-              ? env.NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL_PATH
-              : env.NEXT_PUBLIC_CLERK_SIGN_UP_URL_PATH
+            isSignedIn ? "/dashboard" : "/sign-up"
           }`}
         >
           <Button variant="default" className="rounded-full">

@@ -19,6 +19,8 @@ export default authMiddleware({
     ...locales
       .filter((locale) => locale !== defaultLocale)
       .map((locale) => `/${locale}`),
+    `${env.NEXT_PUBLIC_CLERK_SIGN_IN_URL_PATH}`,
+    `${env.NEXT_PUBLIC_CLERK_SIGN_UP_URL_PATH}`,
     `/:locale${env.NEXT_PUBLIC_CLERK_SIGN_IN_URL_PATH}`,
     `/:locale${env.NEXT_PUBLIC_CLERK_SIGN_UP_URL_PATH}`,
   ],

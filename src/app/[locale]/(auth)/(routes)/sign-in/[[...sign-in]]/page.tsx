@@ -8,7 +8,7 @@ export default function Page() {
 
   return (
     <SignIn
-      redirectUrl={`${locale !== defaultLocale && locale}${
+      redirectUrl={`${locale !== defaultLocale ? locale : ""}${
         env.NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL_PATH
       }`}
     />

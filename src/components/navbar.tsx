@@ -27,7 +27,7 @@ const Navbar = async ({ locale }: NavbarProps) => {
         <LanguageSwitcher />
         <ThemeToggle />
         <UserButton
-          afterSignOutUrl={`/${locale !== defaultLocale && locale}`}
+          afterSignOutUrl={`/${locale !== defaultLocale ? locale : ""}`}
         />
       </div>
     </div>

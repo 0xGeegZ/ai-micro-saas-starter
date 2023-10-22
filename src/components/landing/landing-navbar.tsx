@@ -34,7 +34,7 @@ export const LandingNavbar = () => {
         <LanguageSwitcher />
         <ThemeToggle />
         <Link
-          href={`${locale !== defaultLocale && locale}${
+          href={`${locale !== defaultLocale ? locale : ""}${
             isSignedIn
               ? env.NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL_PATH
               : env.NEXT_PUBLIC_CLERK_SIGN_UP_URL_PATH

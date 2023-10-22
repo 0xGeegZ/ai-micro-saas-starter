@@ -17,7 +17,7 @@ export default async function HomePage() {
         </p>
       </div>
       <div className="px-4 md:px-20 lg:px-32 space-y-4">
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 place-items-center lg:gap-5 px-4 md:px-8">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3 place-items-center lg:gap-5 px-4 md:px-8">
           {applications.map((application) => {
             const Icon = Icons[application.icon as keyof typeof Icons]
             return (

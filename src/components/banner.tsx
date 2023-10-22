@@ -1,5 +1,5 @@
 import { siteConfig } from "@/config/site"
-import Link from "next-intl/link"
+import { Link } from "@/i18n/navigation"
 import { Icons } from "./icons"
 import { RADIAN_BACKGROUND } from "@/config/constants"
 import { cn } from "@/lib/utils"

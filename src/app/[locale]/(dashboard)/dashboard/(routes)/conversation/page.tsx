@@ -6,7 +6,7 @@ import { MessageSquare } from "lucide-react"
 import { useForm } from "react-hook-form"
 import { useState } from "react"
 import { toast } from "react-hot-toast"
-import { useRouter } from "next/navigation"
+import { useRouter } from "@/i18n/navigation"
 import { ChatCompletionRequestMessage } from "openai"
 
 import { BotAvatar } from "@/components/bot-avatar"

@@ -1,5 +1,5 @@
 "use client"
-import { useRouter } from "next/navigation"
+import { useRouter } from "@/i18n/navigation"
 import { useToast } from "@/lib/hooks/use-toast"
 import CardShell, { CardProps } from "./card-shell"
 import { useState } from "react"

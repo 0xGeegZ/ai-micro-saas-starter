@@ -15,8 +15,7 @@ import { renderFlag } from "./render-flag"
 
 import { locales } from "@/i18n/locales"
 import { useLocale } from "next-intl"
-import Link from "next-intl/link"
-
+import { Link } from "@/i18n/navigation"
 export function LanguageSwitcher() {
   const locale = useLocale()
 

@@ -22,7 +22,7 @@ import { Empty } from "@/components/ui/empty"
 import { useProModal } from "@/lib/hooks/use-pro-modal"
 import { codeNavItems, formSchema } from "./constants"
 import { SubNav } from "@/components/sub-nav"
-import { useRouter } from "next/navigation"
+import { useRouter } from "@/i18n/navigation"
 
 const CodePage = () => {
   const router = useRouter()

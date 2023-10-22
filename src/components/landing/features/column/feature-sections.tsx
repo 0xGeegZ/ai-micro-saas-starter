@@ -5,8 +5,7 @@ import { buttonVariants } from "@/components/ui/button"
 import { MAIN_COLOR } from "@/config/constants"
 import { cn } from "@/lib/utils"
 import { List } from "lucide-react"
-import Link from "next-intl/link"
-
+import { Link } from "@/i18n/navigation"
 const features = [
   {
     id: "feature-ai",

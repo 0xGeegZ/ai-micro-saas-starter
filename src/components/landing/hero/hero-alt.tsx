@@ -3,8 +3,7 @@ import { badgeVariants } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { siteConfig } from "@/config/site"
 import Image from "next/image"
-import Link from "next-intl/link"
-
+import { Link } from "@/i18n/navigation"
 export const HeroAlt = () => {
   return (
     <section className="container max-w-[1400px] py-16 lg:py-24 mx-auto">

@@ -8,7 +8,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { Download, ImageIcon } from "lucide-react"
 import { useForm } from "react-hook-form"
 import { toast } from "react-hot-toast"
-import { useRouter } from "next/navigation"
+import { useRouter } from "@/i18n/navigation"
 
 import { Heading } from "@/components/heading"
 import { Button } from "@/components/ui/button"

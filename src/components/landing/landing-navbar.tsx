@@ -1,7 +1,6 @@
 "use client"
 import { Montserrat } from "next/font/google"
 import Image from "next/image"
-import Link from "next-intl/link"
 import { useAuth } from "@clerk/nextjs"
 
 import { cn } from "@/lib/utils"
@@ -9,8 +8,8 @@ import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "../theme-toggle"
 import { siteConfig } from "@/config/site"
 import { LanguageSwitcher } from "../language-switcher"
-import { defaultLocale } from "@/i18n/locales"
 import { useLocale } from "next-intl"
+import { Link } from "@/i18n/navigation"
 
 const font = Montserrat({ weight: "600", subsets: ["latin"] })
 
@@ -31,11 +30,7 @@ export const LandingNavbar = () => {
       <div className="flex items-center gap-x-2">
         <LanguageSwitcher />
         <ThemeToggle />
-        <Link
-          href={`${locale !== defaultLocale ? locale : ""}${
-            isSignedIn ? "/dashboard" : "/sign-up"
-          }`}
-        >
+        <Link href={`${locale}${isSignedIn ? "/dashboard" : "/sign-up"}`}>
           <Button variant="default" className="rounded-full">
             {isSignedIn ? "Dashboard" : "Get Started"}
           </Button>

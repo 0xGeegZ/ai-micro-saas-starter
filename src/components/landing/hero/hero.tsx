@@ -35,7 +35,7 @@ export const Hero = () => {
         </div>
       </div>
       <div className="text-sm md:text-xl font-light text-muted-foreground">
-        Be 10x faster with you personal AI assistants.
+        Work 10x faster with your personal AI assistants.
       </div>
       <div className="grid md:grid-cols-1 place-items-center">
         <ShimmerButton

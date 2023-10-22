@@ -9,6 +9,7 @@ import {
   CardTitle,
 } from "./ui/card"
 import { cn } from "@/lib/utils"
+import { ScrollArea } from "./ui/scroll-area"
 
 export interface CardProps {
   title: string
@@ -58,7 +59,9 @@ export default function CardShell({ card, isLoading, func }: CardShellProps) {
             {card.title}
           </CardTitle>
           <CardDescription className="text-left">
-            {card.description}
+            <ScrollArea className="h-[35px] xl:h-[70px]">
+              {card.description}
+            </ScrollArea>
           </CardDescription>
         </CardContent>
       </div>

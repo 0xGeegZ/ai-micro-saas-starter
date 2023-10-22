@@ -1,7 +1,7 @@
 import { auth } from "@clerk/nextjs"
 
 import db from "@/lib/db"
-import { MAX_FREE_COUNTS } from "@/config/tools"
+import { MAX_FREE_COUNTS } from "@/config/constants"
 
 export const incrementApiLimit = async () => {
   const { userId } = auth()

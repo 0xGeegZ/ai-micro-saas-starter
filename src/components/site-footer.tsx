@@ -137,9 +137,10 @@ export function SiteFooter() {
             ))}
           </div>
           <span className="text-sm text-muted-foreground sm:text-center dark:text-gray-400">
-            © {currentYear}{" "}
+            © {currentYear}
+            {" - "}
             <Link href="/" className="cursor-pointer">
-              ${siteConfig.name}
+              {siteConfig.name}
             </Link>
             . All Rights Reserved.
           </span>

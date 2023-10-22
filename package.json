@@ -43,7 +43,7 @@
     "@radix-ui/react-tooltip": "^1.0.6",
     "@react-three/drei": "^9.83.9",
     "@react-three/fiber": "^8.14.2",
-    "@t3-oss/env-nextjs": "^0.7.0",
+    "@t3-oss/env-nextjs": "^0.7.1",
     "@tanstack/react-table": "^8.10.0",
     "@types/node": "20.4.1",
     "@types/react": "18.2.14",

@@ -1,6 +1,7 @@
 import { auth } from "@clerk/nextjs"
 import { NextResponse } from "next/server"
 import { ChatCompletionRequestMessage, Configuration, OpenAIApi } from "openai"
+import { env } from "@/env"
 
 import { checkSubscription } from "@/lib/subscription"
 import { incrementApiLimit, checkApiLimit } from "@/lib/api-limit"
@@ -9,7 +10,7 @@ import { incrementApiLimit, checkApiLimit } from "@/lib/api-limit"
 export const maxDuration = 300
 
 const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: env.OPENAI_API_KEY,
 })
 
 const openai = new OpenAIApi(configuration)

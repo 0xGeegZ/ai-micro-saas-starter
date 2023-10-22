@@ -5,17 +5,19 @@ import { checkSubscription } from "@/lib/subscription"
 import { incrementApiLimit, checkApiLimit } from "@/lib/api-limit"
 import Replicate from "replicate"
 
+import { env } from "@/env"
+
 // Specifies the maximum allowed duration for this function to execute (in seconds)
 export const maxDuration = 300
 
 // const configuration = new Configuration({
-//   apiKey: process.env.OPENAI_API_KEY,
+//   apiKey: env.OPENAI_API_KEY,
 // })
 
 // const openai = new OpenAIApi(configuration)
 
 const replicate = new Replicate({
-  auth: process.env.REPLICATE_API_TOKEN!,
+  auth: env.REPLICATE_API_TOKEN!,
 })
 
 export async function POST(req: Request) {

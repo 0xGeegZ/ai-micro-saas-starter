@@ -4,12 +4,13 @@ import { Configuration, OpenAIApi } from "openai"
 
 import { checkSubscription } from "@/lib/subscription"
 import { incrementApiLimit, checkApiLimit } from "@/lib/api-limit"
+import { env } from "@/env"
 
 // Specifies the maximum allowed duration for this function to execute (in seconds)
 export const maxDuration = 300
 
 const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: env.OPENAI_API_KEY,
 })
 
 const openai = new OpenAIApi(configuration)

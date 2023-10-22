@@ -5,6 +5,8 @@ import { NextResponse } from "next/server"
 import db from "@/lib/db"
 import { stripe } from "@/lib/stripe/stripe"
 
+import { env } from "@/env"
+
 export async function POST(req: Request) {
   const body = await req.text()
   const signature = headers().get("Stripe-Signature") as string
@@ -15,7 +17,7 @@ export async function POST(req: Request) {
     event = stripe.webhooks.constructEvent(
       body,
       signature,
-      process.env.STRIPE_WEBHOOK_SECRET!
+      env.STRIPE_WEBHOOK_SECRET!
     )
   } catch (error: any) {
     return new NextResponse(`Webhook Error: ${error.message}`, { status: 400 })

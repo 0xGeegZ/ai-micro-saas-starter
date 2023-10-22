@@ -5,11 +5,13 @@ import { NextResponse } from "next/server"
 import { incrementApiLimit, checkApiLimit } from "@/lib/api-limit"
 import { checkSubscription } from "@/lib/subscription"
 
+import { env } from "@/env"
+
 // Specifies the maximum allowed duration for this function to execute (in seconds)
 export const maxDuration = 300
 
 const replicate = new Replicate({
-  auth: process.env.REPLICATE_API_TOKEN!,
+  auth: env.REPLICATE_API_TOKEN!,
 })
 
 export async function POST(req: Request) {

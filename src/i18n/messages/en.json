@@ -53,13 +53,18 @@
     "heroFooter": "No credit card required."
   },
   "technologies": {
-    // Add the keys and translations for the technologies component here
+    "technology1": "Technology 1",
+    "technology2": "Technology 2",
+    "technology3": "Technology 3"
   },
   "testimonialHighlight": {
-    "testimonialName": "GeegZ"
-    // Add the rest of the keys and translations for the testimonialHighlight component here
+    "testimonialName": "GeegZ",
+    "testimonialText": "This is a testimonial",
+    "testimonialAuthor": "Author Name"
   },
   "featureSections": {
-    // Add the keys and translations for the featureSections component here
+    "feature1": "Feature 1",
+    "feature2": "Feature 2",
+    "feature3": "Feature 3"
   }
 }

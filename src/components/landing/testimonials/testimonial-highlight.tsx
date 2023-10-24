@@ -1,8 +1,10 @@
 import { Icons } from "@/components/icons"
 import { siteConfig } from "@/config/site"
 import Link from "next-intl/link"
+import { useTranslations } from "next-intl"
 
 const TestimonialHighlight = () => {
+  const t = useTranslations("testimonialHighlight")
   return (
     <>
       <section id="testimonial-highlight">
@@ -18,8 +20,7 @@ const TestimonialHighlight = () => {
                   className="text-accent-foreground text-xl text-center font-semibold sm:text-2xl italic group-hover:-translate-y-1 transition-all duration-300 ease-in-out
                 "
                 >
-                  “🔥 {siteConfig.name} is awesome to build AI micro saas and
-                  leverage Next13“
+                  {t("testimonialHighlight")}
                 </p>
               </blockquote>
               <div className="mt-6">
@@ -36,7 +37,7 @@ const TestimonialHighlight = () => {
                     <Icons.twitterVerified className="ml-1 mb-[0.2rem] inline h-4 w-4 text-blue-500" />
                   </span>
                   <span className="block text-accent-foreground text-sm mt-0.5">
-                    Builder of {siteConfig.name}
+                    {t("builderOfSite")}
                   </span>
                   <Icons.vercel className="w-24 mx-auto" />
                 </div>

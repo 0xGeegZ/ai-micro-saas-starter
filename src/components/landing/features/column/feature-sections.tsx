@@ -1,4 +1,5 @@
 "use client"
+import { useTranslations } from "next-intl"
 
 import { Icons } from "@/components/icons"
 import { buttonVariants } from "@/components/ui/button"
@@ -10,46 +11,35 @@ import Link from "next-intl/link"
 const features = [
   {
     id: "feature-ai",
-    header: "AI Feature 1",
-    name: "AI Feature Name 1",
-    description:
-      "Description for AI Feature 1. This feature provides advanced AI capabilities to your application, enhancing its functionality and user experience.",
-    icon: Icons.openai,
-    video:
-      "https://static.videezy.com/system/resources/previews/000/022/066/original/4k-dynamic-preloader-with-dots-animation.mp4",
-    cta: "Get Started",
+    header: t("aiFeature1Header"),
+    name: t("aiFeature1Name"),
+    description: t("aiFeature1Description"),
+    cta: t("getStarted"),
     href: "/sign-up",
     reverse: false,
   },
   {
     id: "feature-ai-2",
-    header: "AI Feature 2",
-    name: "AI Feature Name 2",
-    description:
-      "Description for AI Feature 2. This feature leverages AI to provide unique insights and analytics, helping you make data-driven decisions.",
-    icon: List,
-    video:
-      "https://static.videezy.com/system/resources/previews/000/022/066/original/4k-dynamic-preloader-with-dots-animation.mp4",
-    cta: "Get Started",
+    header: t("aiFeature2Header"),
+    name: t("aiFeature2Name"),
+    description: t("aiFeature2Description"),
+    cta: t("getStarted"),
     href: "/sign-up",
     reverse: true,
   },
   {
     id: "feature-ai-3",
-    header: "AI Feature 3",
-    name: "AI Feature Name 3",
-    description:
-      "Description for AI Feature 3. This feature uses AI to personalize user experiences, making your application more engaging and user-friendly.",
-    icon: Icons.user,
-    video:
-      "https://static.videezy.com/system/resources/previews/000/022/066/original/4k-dynamic-preloader-with-dots-animation.mp4",
-    cta: "Get Started",
+    header: t("aiFeature3Header"),
+    name: t("aiFeature3Name"),
+    description: t("aiFeature3Description"),
+    cta: t("getStarted"),
     href: "/sign-up",
     reverse: false,
   },
 ]
 
 const FeatureSections = () => {
+  const t = useTranslations("featureSections")
   return (
     <>
       {features.map((feature) => (

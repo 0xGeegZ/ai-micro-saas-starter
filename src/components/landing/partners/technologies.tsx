@@ -72,13 +72,16 @@ const tools: Tool[] = [
   },
 ]
 
+import { useTranslations } from "next-intl"
+
 export const Technologies = () => {
+  const t = useTranslations("technologies")
   return (
     <section className="container max-w-[1400px] pb-12 md:pb-16 lg:pb-24 mx-auto">
       <div className="w-full flex flex-col items-center text-center gap-8">
         <div className="text-center">
           <p className="text-muted-foreground text-base sm:text-lg">
-            This project was built using the following technologies
+            {t("builtUsingTechnologies")}
           </p>
         </div>
 

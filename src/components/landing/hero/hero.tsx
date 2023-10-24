@@ -1,4 +1,5 @@
 "use client"
+import { useTranslations } from "next-intl"
 import TypewriterComponent from "typewriter-effect"
 import { useAuth } from "@clerk/nextjs"
 

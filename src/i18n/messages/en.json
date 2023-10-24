@@ -53,18 +53,23 @@
     "heroFooter": "No credit card required."
   },
   "technologies": {
-    "technology1": "Technology 1",
-    "technology2": "Technology 2",
-    "technology3": "Technology 3"
+    "builtUsingTechnologies": "This project was built using the following technologies"
   },
   "testimonialHighlight": {
     "testimonialName": "GeegZ",
-    "testimonialText": "This is a testimonial",
-    "testimonialAuthor": "Author Name"
+    "testimonialHighlight": "🔥 {siteConfig.name} is awesome to build AI micro saas and leverage Next13",
+    "builderOfSite": "Builder of {siteConfig.name}"
   },
   "featureSections": {
-    "feature1": "Feature 1",
-    "feature2": "Feature 2",
-    "feature3": "Feature 3"
+    "aiFeature1Header": "AI Feature 1",
+    "aiFeature1Name": "AI Feature Name 1",
+    "aiFeature1Description": "Description for AI Feature 1. This feature provides advanced AI capabilities to your application, enhancing its functionality and user experience.",
+    "aiFeature2Header": "AI Feature 2",
+    "aiFeature2Name": "AI Feature Name 2",
+    "aiFeature2Description": "Description for AI Feature 2. This feature leverages AI to provide unique insights and analytics, helping you make data-driven decisions.",
+    "aiFeature3Header": "AI Feature 3",
+    "aiFeature3Name": "AI Feature Name 3",
+    "aiFeature3Description": "Description for AI Feature 3. This feature uses AI to personalize user experiences, making your application more engaging and user-friendly.",
+    "getStarted": "Get Started"
   }
 }

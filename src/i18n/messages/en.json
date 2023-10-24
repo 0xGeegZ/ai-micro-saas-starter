@@ -39,5 +39,27 @@
         "href": "https://github.com/amannn/next-intl/tree/main/examples/example-next-13"
       }
     }
+  },
+  "hero": {
+    "heroTitle": "AI-Driven Micro-SaaS for",
+    "heroTypewriterStrings": [
+      "Social Media Marketing.",
+      "Content Writing.",
+      "Recruitment & HR.",
+      "Product Management."
+    ],
+    "heroSubtitle": "Work 10x faster with your personal AI assistants.",
+    "heroButton": "Get started for free",
+    "heroFooter": "No credit card required."
+  },
+  "technologies": {
+    // Add the keys and translations for the technologies component here
+  },
+  "testimonialHighlight": {
+    "testimonialName": "GeegZ"
+    // Add the rest of the keys and translations for the testimonialHighlight component here
+  },
+  "featureSections": {
+    // Add the keys and translations for the featureSections component here
   }
 }

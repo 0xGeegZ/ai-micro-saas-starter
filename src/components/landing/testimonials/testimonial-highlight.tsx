@@ -33,7 +33,7 @@ const TestimonialHighlight = () => {
                 />
                 <div className="mt-3">
                   <span className="block font-semibold">
-                    GeegZ
+                    {t('testimonialName')}
                     <Icons.twitterVerified className="ml-1 mb-[0.2rem] inline h-4 w-4 text-blue-500" />
                   </span>
                   <span className="block text-accent-foreground text-sm mt-0.5">

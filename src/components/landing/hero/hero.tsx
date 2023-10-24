@@ -1,7 +1,5 @@
 "use client"
 import { useTranslations } from "next-intl"
-
-const { t } = useTranslations('hero')
 import TypewriterComponent from "typewriter-effect"
 import { useAuth } from "@clerk/nextjs"
 
@@ -16,6 +14,7 @@ import {
 import { cn } from "@/lib/utils"
 
 export const Hero = () => {
+  const { t } = useTranslations('hero')
   const { isSignedIn } = useAuth()
 
   return (

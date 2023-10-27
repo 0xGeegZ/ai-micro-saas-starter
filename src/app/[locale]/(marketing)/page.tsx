@@ -6,6 +6,7 @@ import { Examples } from "@/components/landing/examples/examples"
 import FeatureSections from "@/components/landing/features/column/feature-sections"
 import { OpenSource } from "@/components/landing/open-source"
 import { Technologies } from "@/components/landing/partners/technologies"
+import { Suspense } from "react"
 
 const LandingPage = () => {
   // const user = await getCurrentUser()
@@ -18,7 +19,9 @@ const LandingPage = () => {
       <TestimonialHighlight />
       <FeatureSections />
       <Examples />
-      <Testimonials />
+      <Suspense>
+        <Testimonials />
+      </Suspense>
       <OpenSource />
       {/* END OF LANDING PAGE */}
       {/* <TestimonialsAlt />

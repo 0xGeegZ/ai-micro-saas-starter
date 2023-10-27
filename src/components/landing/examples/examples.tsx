@@ -1,11 +1,11 @@
 "use client"
 import { TypographyP } from "@/components/ui/typography"
 import { FormProps } from "@/lib/hooks/use-playground-form"
-import React from "react"
 import { ExampleOutputDialog } from "./example-output-dialog"
 import Marquee from "@/components/magicui/marquee"
 import { RADIAN_BACKGROUND } from "@/config/constants"
 import { cn } from "@/lib/utils"
+import { useState } from "react"
 
 export const exampleFormValues: {
   [key: string]: FormProps & {
@@ -77,8 +77,7 @@ const secondRowExamples = [
 ]
 
 export function Examples() {
-  const [selectedExample, setSelectedExample] =
-    React.useState<FormProps | null>(null)
+  const [selectedExample, setSelectedExample] = useState<FormProps | null>(null)
 
   return (
     <section id="examples" className="relative">

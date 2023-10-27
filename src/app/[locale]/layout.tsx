@@ -42,8 +42,8 @@ export default async function RootLayout({
   const applications = await loadFullApplications()
 
   return (
-    <ClerkProvider>
-      <html lang={locale} suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
+      <ClerkProvider>
         <body
           className={cn(
             font.className,
@@ -62,7 +62,7 @@ export default async function RootLayout({
           </ThemeProvider>
         </body>
         <CrispProvider />
-      </html>
-    </ClerkProvider>
+      </ClerkProvider>
+    </html>
   )
 }

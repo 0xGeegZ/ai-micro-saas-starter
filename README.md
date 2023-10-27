@@ -1,15 +1,15 @@
-# Micro SaaS AI Starter with Next.js 13, React, Tailwind, Prisma, Stripe & GeneratedBy API
+# Micro SaaS AI Starter with Next.js 14, React, Tailwind, Prisma, Stripe & GeneratedBy API
 
 ![Micro SaaS AI Starter](https://github.com/0xGeegZ/ai-micro-saas-starter/blob/master/public/repo-amin-image.png?raw=true)
 
 > **Note:** This project is a fork of [next13-ai-saas](https://github.com/AntonioErdeljac/next13-ai-saas) by Antonio Erdeljac.
 
-This is a repository for Build a Micro SaaS AI Platform with Next.js 13, Shadcn, Prisma, Stripe and GeneratedBy for the AI part.
+This is a repository for Build a Micro SaaS AI Platform with Next.js 14, Shadcn, Prisma, Stripe and GeneratedBy for the AI part.
 
 Features:
 
 - AI prompts folders to generate main project pages (Terms, FAQ, Privacy Policy, About, Documentation, etc.)
-- Folder structure in [Next 13 App Router](https://nextjs.org/docs/app)
+- Folder structure in [Next 14 App Router](https://nextjs.org/docs/app)
 - [Next Intl](https://next-intl-docs.vercel.app/) for Internationalization (compatible with App Router Server 1 Client components)
 - [Shadcn](https://ui.shadcn.com/) UI on top of Radix UI
 - [Tailwind](https://tailwindcss.com/docs/installation) & [Framer Motion](https://www.framer.com/motion/) animations and effects

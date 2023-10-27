@@ -3,7 +3,7 @@ branch: "master"
 blocked_dirs:
   [".github/", "./content/", "./public/", "./scripts/", "./src/styles"]
 draft: True
-description: "This is a repository for Build a Micro SaaS AI Platform with Next.js 13, React, Tailwind, Prisma, Stripe and GeneratedBy for the AI part."
+description: "This is a repository for Build a Micro SaaS AI Platform with Next.js 14, React, Tailwind, Prisma, Stripe and GeneratedBy for the AI part."
 docs:
   NextJs: ["https://nextjs.org/docs", "Documentation for Next.js framework"]
   GeneratedBy:

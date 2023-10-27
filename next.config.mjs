@@ -20,6 +20,17 @@ const nextConfig = {
       },
     },
   }),
+  experimental: {
+    // Enabling Skew protection
+    useDeploymentId: true,
+    useDeploymentIdServerActions: true,
+    // End Enabling Skew protection
+    serverMinification: true,
+    forceSwcTransforms: true,
+    optimisticClientCache: true,
+    workerThreads: true,
+    optimizeServerReact: true,
+  },
   images: {
     domains: [
       "images.clerk.com",

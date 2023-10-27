@@ -19,7 +19,7 @@ const TestimonialHighlight = () => {
                 "
                 >
                   “🔥 {siteConfig.name} is awesome to build AI micro saas and
-                  leverage Next13“
+                  leverage Next 14“
                 </p>
               </blockquote>
               <div className="mt-6">

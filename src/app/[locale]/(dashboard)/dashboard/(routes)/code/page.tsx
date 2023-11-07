@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form"
 import { useState } from "react"
 import { toast } from "react-hot-toast"
 import ReactMarkdown from "react-markdown"
-import { ChatCompletionRequestMessage } from "openai"
+import OpenAI from "openai"
 
 import { BotAvatar } from "@/components/bot-avatar"
 import { Heading } from "@/components/heading"
@@ -27,7 +27,9 @@ import { useRouter } from "next/navigation"
 const CodePage = () => {
   const router = useRouter()
   const proModal = useProModal()
-  const [messages, setMessages] = useState<ChatCompletionRequestMessage[]>([])
+  const [messages, setMessages] = useState<
+    OpenAI.Chat.CreateChatCompletionRequestMessage[]
+  >([])
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -40,7 +42,7 @@ const CodePage = () => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      const userMessage: ChatCompletionRequestMessage = {
+      const userMessage: OpenAI.Chat.ChatCompletionMessageParam = {
         role: "user",
         content: values.prompt,
       }
@@ -127,7 +129,7 @@ const CodePage = () => {
           <div className="flex flex-col-reverse gap-y-4">
             {messages.map((message) => (
               <div
-                key={message.content}
+                key={message.content?.toString()}
                 className={cn(
                   "p-8 w-full flex items-start gap-x-8 rounded-lg",
                   message.role === "user"
@@ -149,7 +151,7 @@ const CodePage = () => {
                   }}
                   className="text-sm overflow-hidden leading-7"
                 >
-                  {message.content || ""}
+                  {message.content?.toString() || ""}
                 </ReactMarkdown>
               </div>
             ))}

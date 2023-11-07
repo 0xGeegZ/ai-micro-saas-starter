@@ -44,7 +44,7 @@ const ImageHistoryPage = () => {
     defaultValues: {
       prompt: "",
       amount: "1",
-      resolution: "512x512",
+      resolution: "1024x1024",
     },
   })
 
@@ -56,10 +56,10 @@ const ImageHistoryPage = () => {
 
       const response = await axios.post("/api/image", values)
 
-      // const urls = response.data.map((image: { url: string }) => image.url)
+      const urls = response.data.map((image: { url: string }) => image.url)
 
-      // setPhotos(urls)
-      setPhotos(response.data)
+      setPhotos(urls)
+      // setPhotos(response.data)
     } catch (error: any) {
       if (error?.response?.status === 403) {
         proModal.onOpen()

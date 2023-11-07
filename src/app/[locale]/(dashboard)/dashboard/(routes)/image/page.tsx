@@ -44,7 +44,7 @@ const ImageHistoryPage = () => {
     defaultValues: {
       prompt: "",
       amount: "1",
-      resolution: "512x512",
+      resolution: "1024x1024",
     },
   })
 

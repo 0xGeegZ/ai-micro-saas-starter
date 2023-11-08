@@ -21,6 +21,7 @@ const ApplicationIframe: React.FC<ApplicationIframeProps> = ({ url }) => {
 
       // Add the resolvedTheme as a param called theme
       params.set("theme", resolvedTheme)
+      params.set("isDisplayHeader", "false")
 
       // Update the search string of the URL object
       urlObj.search = params.toString()
